@@ -37,7 +37,12 @@ export function HeaderActions({ accountSlot }: { accountSlot: ReactNode }) {
 
   return (
     <>
-      <button type="button" aria-label={header.searchLabel} className={iconBtn} onClick={() => setSearchOpen(true)}>
+      <button
+        type="button"
+        aria-label={header.searchLabel}
+        className={iconBtn}
+        onClick={() => setSearchOpen(true)}
+      >
         <Search aria-hidden className="size-5" />
       </button>
 
@@ -66,7 +71,12 @@ export function HeaderActions({ accountSlot }: { accountSlot: ReactNode }) {
 
       {accountSlot}
 
-      <button type="button" aria-label={header.cartLabel(shownCount)} className={iconBtn} onClick={openCart}>
+      <button
+        type="button"
+        aria-label={header.cartLabel(shownCount)}
+        className={iconBtn}
+        onClick={openCart}
+      >
         <ShoppingBag aria-hidden className="size-5" />
         <span
           aria-hidden

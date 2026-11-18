@@ -4,7 +4,8 @@ import { describe, expect, it } from 'vitest'
 import { fixtures, type FixtureName } from '@/lib/commerce/schemas'
 
 const dataDir = path.resolve(__dirname, '../../../data')
-const load = (name: string): unknown => JSON.parse(fs.readFileSync(path.join(dataDir, `${name}.json`), 'utf8'))
+const load = (name: string): unknown =>
+  JSON.parse(fs.readFileSync(path.join(dataDir, `${name}.json`), 'utf8'))
 
 describe('fixtures match schemas', () => {
   for (const name of Object.keys(fixtures) as FixtureName[]) {
@@ -15,7 +16,10 @@ describe('fixtures match schemas', () => {
   }
 
   it('every data file has a schema', () => {
-    const files = fs.readdirSync(dataDir).filter((f) => f.endsWith('.json')).map((f) => f.replace(/\.json$/, ''))
+    const files = fs
+      .readdirSync(dataDir)
+      .filter((f) => f.endsWith('.json'))
+      .map((f) => f.replace(/\.json$/, ''))
     expect(files.sort()).toEqual(Object.keys(fixtures).sort())
   })
 })
@@ -29,10 +33,13 @@ describe('fixture referential integrity', () => {
   const proofs = fixtures.proofs.parse(load('proofs'))
 
   it('fitment references existing housings', () => {
-    for (const f of fitment) for (const h of f.housings) expect(codes, `${f.id} → ${h}`).toContain(h)
+    for (const f of fitment)
+      for (const h of f.housings) expect(codes, `${f.id} → ${h}`).toContain(h)
   })
   it('vehicle products reference existing housings and every housing has a product', () => {
-    const productCodes = new Set(products.filter((p) => p.productType === 'vehicle').map((p) => p.housing_code))
+    const productCodes = new Set(
+      products.filter((p) => p.productType === 'vehicle').map((p) => p.housing_code),
+    )
     for (const c of productCodes) expect(codes).toContain(c)
     for (const c of codes) expect(productCodes, `housing ${c} has no product`).toContain(c)
   })
@@ -48,7 +55,23 @@ describe('fixture referential integrity', () => {
   })
   it('covers the 15 launch vehicle lines', () => {
     const models = new Set(fitment.map((f) => `${f.make} ${f.model}`))
-    for (const m of ['Ford F-150', 'RAM 1500', 'Chevrolet Silverado 1500', 'Tesla Model 3', 'Tesla Model Y', 'Dodge Challenger', 'Dodge Charger', 'Toyota Camry', 'Honda Accord', 'Chevrolet Tahoe', 'Cadillac Escalade', 'Jeep Grand Cherokee', 'Ford Mustang', 'BMW 5 Series', 'Mercedes-Benz C-Class'])
+    for (const m of [
+      'Ford F-150',
+      'RAM 1500',
+      'Chevrolet Silverado 1500',
+      'Tesla Model 3',
+      'Tesla Model Y',
+      'Dodge Challenger',
+      'Dodge Charger',
+      'Toyota Camry',
+      'Honda Accord',
+      'Chevrolet Tahoe',
+      'Cadillac Escalade',
+      'Jeep Grand Cherokee',
+      'Ford Mustang',
+      'BMW 5 Series',
+      'Mercedes-Benz C-Class',
+    ])
       expect(models).toContain(m)
   })
   it('social proof is always flagged sample', () => {

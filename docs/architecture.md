@@ -1,23 +1,25 @@
 # Architecture
 
 ## Stack
-| Concern | Choice |
-| --- | --- |
-| Framework | Next.js 16.4 App Router, React 19 Server Components, Turbopack |
-| Rendering | `cacheComponents` + `partialPrefetching` (static shell + streamed dynamic holes) |
-| Language | TypeScript strict |
-| Styling | Tailwind v4, design tokens as CSS variables in `app/globals.css` (`@theme`) |
-| Primitives | Radix UI (`radix-ui` package), lucide-react icons, CVA variants |
-| Motion | CSS transitions by default; GSAP + ScrollTrigger lazy-loaded for hero/scroll only |
-| Projection | Canvas 2D, pure engine in `lib/projection` |
-| Client state | Zustand + `persist` (localStorage): cart, garage, customizer |
-| Forms | react-hook-form + zod |
-| Tests | Vitest + Testing Library (jsdom); Playwright e2e + axe |
-| Tooling | pnpm, ESLint (flat config, next core-web-vitals), Prettier + tailwind plugin |
-| Hosting (later) | Vercel |
-| Commerce (later) | Shopify Storefront API, Cart API, hosted checkout, Customer Account API |
+
+| Concern          | Choice                                                                            |
+| ---------------- | --------------------------------------------------------------------------------- |
+| Framework        | Next.js 16.4 App Router, React 19 Server Components, Turbopack                    |
+| Rendering        | `cacheComponents` + `partialPrefetching` (static shell + streamed dynamic holes)  |
+| Language         | TypeScript strict                                                                 |
+| Styling          | Tailwind v4, design tokens as CSS variables in `app/globals.css` (`@theme`)       |
+| Primitives       | Radix UI (`radix-ui` package), lucide-react icons, CVA variants                   |
+| Motion           | CSS transitions by default; GSAP + ScrollTrigger lazy-loaded for hero/scroll only |
+| Projection       | Canvas 2D, pure engine in `lib/projection`                                        |
+| Client state     | Zustand + `persist` (localStorage): cart, garage, customizer                      |
+| Forms            | react-hook-form + zod                                                             |
+| Tests            | Vitest + Testing Library (jsdom); Playwright e2e + axe                            |
+| Tooling          | pnpm, ESLint (flat config, next core-web-vitals), Prettier + tailwind plugin      |
+| Hosting (later)  | Vercel                                                                            |
+| Commerce (later) | Shopify Storefront API, Cart API, hosted checkout, Customer Account API           |
 
 ## Folder layout
+
 ```
 app/                    routes (server components by default)
 components/
@@ -44,6 +46,7 @@ docs/                   this folder
 ```
 
 ## Commerce adapter
+
 ```
 lib/commerce/
   types.ts        domain types + CommerceAdapter interface
@@ -55,7 +58,9 @@ lib/commerce/
   shopify/        same interface; every method throws NotImplemented with a TODO naming the
                   Storefront/Cart/Customer Account API operation it will call
 ```
+
 Rules:
+
 - Components and pages call `getCommerce()` (server) or Server Actions (mutations). Never `fetch`.
 - The cart has two halves: **client store** (`lib/stores/cart.ts`) for instant UI, and the
   **adapter cart** (`createCart`, `addCartLines`, ...) which the mock implements in memory and Shopify
@@ -66,6 +71,7 @@ Rules:
 - IDs: opaque strings. Mock uses `gid://mock/Product/...` so code never parses IDs.
 
 ## Caching with cacheComponents
+
 - Catalog reads (products, vehicles, housings, designs) are wrapped in `'use cache'` +
   `cacheLife('hours')` + `cacheTag('products')` in server data functions, so pages prerender a
   static shell. Phase 2 webhooks call `revalidateTag('products', 'max')`.
@@ -75,5 +81,6 @@ Rules:
   from the garage store, so the static shell stays cacheable.
 
 ## Environment
+
 See `.env.example`. `COMMERCE_PROVIDER` (default `mock`), `MOCK_LATENCY_MS`, `MOCK_ERROR_RATE`,
 `NEXT_PUBLIC_SITE_URL`, and Phase 2 Shopify vars (documented but unused).

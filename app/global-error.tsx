@@ -30,7 +30,17 @@ export default function GlobalError({ retry }: { error: unknown; retry: () => vo
           <button
             type="button"
             onClick={() => retry()}
-            style={{ marginTop: '1rem', height: 44, padding: '0 1.25rem', borderRadius: 999, border: 0, background: '#7de3ff', color: '#03131b', fontWeight: 600, cursor: 'pointer' }}
+            style={{
+              marginTop: '1rem',
+              height: 44,
+              padding: '0 1.25rem',
+              borderRadius: 999,
+              border: 0,
+              background: '#7de3ff',
+              color: '#03131b',
+              fontWeight: 600,
+              cursor: 'pointer',
+            }}
           >
             {states.retry}
           </button>

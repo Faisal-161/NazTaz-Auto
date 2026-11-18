@@ -22,7 +22,10 @@ export function getAttr(attributes: Attribute[], key: AttrKey): string | undefin
 }
 
 /** Merge attributes; later values win, empty values are dropped. */
-export function setAttrs(attributes: Attribute[], updates: Partial<Record<AttrKey, string | undefined>>): Attribute[] {
+export function setAttrs(
+  attributes: Attribute[],
+  updates: Partial<Record<AttrKey, string | undefined>>,
+): Attribute[] {
   const map = new Map(attributes.map((a) => [a.key, a.value]))
   for (const [key, value] of Object.entries(updates)) {
     if (value === undefined || value === '') map.delete(key)

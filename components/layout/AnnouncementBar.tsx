@@ -14,7 +14,10 @@ export function AnnouncementBar() {
     >
       <p className="container-page py-2 pr-12">
         <span>{announcement.message}</span>{' '}
-        <Link href={announcement.link.href} className="font-medium text-accent underline-offset-4 hover:underline">
+        <Link
+          href={announcement.link.href}
+          className="font-medium text-accent underline-offset-4 hover:underline"
+        >
           {announcement.link.label}
         </Link>
       </p>

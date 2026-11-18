@@ -72,7 +72,9 @@ export function SheetContent({
           <div aria-hidden className="mx-auto mt-2.5 h-1.5 w-10 shrink-0 rounded-full bg-line" />
         ) : null}
         <div className="flex items-center justify-between gap-3 px-5 pt-4 pb-3">
-          <Dialog.Title className={cn('font-display text-lg font-semibold', hideTitle && 'sr-only')}>
+          <Dialog.Title
+            className={cn('font-display text-lg font-semibold', hideTitle && 'sr-only')}
+          >
             {title}
           </Dialog.Title>
           <div className="flex items-center gap-1">
@@ -86,7 +88,9 @@ export function SheetContent({
           </div>
         </div>
         {description ? (
-          <Dialog.Description className="px-5 pb-3 text-sm text-muted">{description}</Dialog.Description>
+          <Dialog.Description className="px-5 pb-3 text-sm text-muted">
+            {description}
+          </Dialog.Description>
         ) : null}
         {children}
       </Dialog.Content>

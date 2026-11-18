@@ -11,7 +11,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-header border-b border-line/70 bg-bg/85 backdrop-blur-md supports-[backdrop-filter]:bg-bg/70">
       <div className="container-page flex h-16 items-center gap-3 lg:gap-6">
-        <Link href="/" aria-label={`${site.name} ${header.homeLabel}`} className="flex shrink-0 items-center rounded-md">
+        <Link
+          href="/"
+          aria-label={`${site.name} ${header.homeLabel}`}
+          className="flex shrink-0 items-center rounded-md"
+        >
           <Logo />
         </Link>
 

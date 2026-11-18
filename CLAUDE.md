@@ -10,20 +10,22 @@ are undecided — always write `{{BRAND}}` (it lives in `content/site.ts`, chang
 later and must be a data-adapter swap, not a rewrite. SEO content comes later but must not be blocked.
 
 ## Read before working
-| Topic | File |
-| --- | --- |
-| Business, customers, pricing, competitor, legal rules | [docs/brief.md](docs/brief.md) |
-| Stack, commerce adapter, folders, rendering rules | [docs/architecture.md](docs/architecture.md) |
-| Data models + cart line attributes | [docs/data-models.md](docs/data-models.md) |
-| Routes, global UI, homepage sections | [docs/routes.md](docs/routes.md) |
-| Feature specs F1–F10 | [docs/features.md](docs/features.md) |
-| Design tokens + visual direction | [docs/design-system.md](docs/design-system.md) |
-| Perf budgets, a11y, review gate | [docs/quality.md](docs/quality.md) |
-| Roadmap (keep checkboxes current) | [docs/roadmap.md](docs/roadmap.md) |
-| Decisions + open questions | [docs/decisions.md](docs/decisions.md) |
-| **What's already built (read first)** | [docs/progress.md](docs/progress.md) |
+
+| Topic                                                 | File                                           |
+| ----------------------------------------------------- | ---------------------------------------------- |
+| Business, customers, pricing, competitor, legal rules | [docs/brief.md](docs/brief.md)                 |
+| Stack, commerce adapter, folders, rendering rules     | [docs/architecture.md](docs/architecture.md)   |
+| Data models + cart line attributes                    | [docs/data-models.md](docs/data-models.md)     |
+| Routes, global UI, homepage sections                  | [docs/routes.md](docs/routes.md)               |
+| Feature specs F1–F10                                  | [docs/features.md](docs/features.md)           |
+| Design tokens + visual direction                      | [docs/design-system.md](docs/design-system.md) |
+| Perf budgets, a11y, review gate                       | [docs/quality.md](docs/quality.md)             |
+| Roadmap (keep checkboxes current)                     | [docs/roadmap.md](docs/roadmap.md)             |
+| Decisions + open questions                            | [docs/decisions.md](docs/decisions.md)         |
+| **What's already built (read first)**                 | [docs/progress.md](docs/progress.md)           |
 
 ## Commands (pnpm only)
+
 ```
 pnpm dev            # next dev (Turbopack)
 pnpm build          # production build — check route sizes against budgets
@@ -37,9 +39,10 @@ pnpm ci             # lint + typecheck + test + build (what CI runs)
 ```
 
 ## Next.js 16.4 — this is NOT older Next
+
 - `cacheComponents: true` + `partialPrefetching: true` are on. Async data in a server component
   must be inside `'use cache'` (with `cacheLife`) or wrapped in `<Suspense>`. No `export const
-  dynamic/revalidate`. `new Date()`, `Math.random()` in a prerender fail the build.
+dynamic/revalidate`. `new Date()`, `Math.random()` in a prerender fail the build.
 - `params` / `searchParams` are Promises: `const { handle } = await props.params`.
 - Use `PageProps<'/products/[handle]'>` / `LayoutProps<'/'>` global helper types.
 - `middleware.ts` is now `proxy.ts`. `next lint` is gone: use `eslint` CLI.
@@ -47,6 +50,7 @@ pnpm ci             # lint + typecheck + test + build (what CI runs)
   the Context7 MCP when it is connected; never guess an API.
 
 ## Architecture rules (non-negotiable)
+
 1. **All data goes through `lib/commerce/`.** Components never `fetch`, never import `data/*.json`.
    `getCommerce()` from `lib/commerce` picks `mock` or `shopify` by `COMMERCE_PROVIDER`.
 2. Both adapters implement `CommerceAdapter` in `lib/commerce/types.ts`. Add a method there first,
@@ -62,9 +66,10 @@ pnpm ci             # lint + typecheck + test + build (what CI runs)
 8. Products are per HOUSING, not per vehicle. Vehicles → fitment → housings → products.
 
 ## Rendering + performance
+
 - Server Components by default. `"use client"` only for interactivity, at the smallest leaf.
 - GSAP, canvas, video, heavy dialogs: `next/dynamic` or load on view. Never in the first-load bundle.
-- `next/image` always, with `sizes`. Only the LCP image gets `priority`.
+- `next/image` always, with `sizes`. Only the LCP image gets `preload` (Next 16 replaced `priority`).
 - First-load client code (header actions, sticky CTA, `app/error.tsx`) uses `cx()` from
   `lib/cx` and `buttonVariants` — NOT `cn()`/`<Button>` (tailwind-merge + Slot ≈ 10KB gz).
   Overlays mount on first open via `next/dynamic`. Run `pnpm analyze:size` after `pnpm build`.
@@ -74,6 +79,7 @@ pnpm ci             # lint + typecheck + test + build (what CI runs)
   JS: `usePrefersReducedMotion()` from `lib/hooks`).
 
 ## Accessibility (WCAG 2.2 AA)
+
 - Keyboard-usable finder, customizer, drawer, dialogs. Use Radix primitives for dialogs, menus,
   selects, tabs, toasts — don't hand-roll focus traps.
 - Visible focus (`focus-visible:ring`), labels on every input, 24×24 min target, AA contrast on the
@@ -81,10 +87,12 @@ pnpm ci             # lint + typecheck + test + build (what CI runs)
 - One `<h1>` per page, semantic landmarks (`header`, `nav`, `main#main`, `footer`), skip link.
 
 ## SEO-ready (no SEO content yet)
+
 - Clean, lowercase, hyphenated URLs. Server-rendered content. Every route exports `metadata` or
   `generateMetadata` via `lib/seo/metadata.ts` helper (titles only for now).
 
 ## Legal / content rules
+
 - NEVER copy custompuddlelights.com (Ludicrous Revolution Inc / PimpMyEV): no name, text, images,
   layout or reviews. No competitor images anywhere.
 - No car-maker logos as designs or in our art. Uploads require a rights checkbox.
@@ -92,6 +100,7 @@ pnpm ci             # lint + typecheck + test + build (what CI runs)
 - Placeholder media is clearly marked (`<PlaceholderMedia />`).
 
 ## Code style
+
 - TypeScript strict, no `any` (use `unknown` + zod). Zod schemas validate fixtures and forms.
 - Components: PascalCase files, named exports. One component per file in `components/<area>/`.
 - Styling: Tailwind utilities backed by CSS-variable tokens in `app/globals.css`. No raw hex in
@@ -101,6 +110,7 @@ pnpm ci             # lint + typecheck + test + build (what CI runs)
 - Tests next to the domain: `tests/unit/**` for lib, `tests/components/**`, `e2e/**`.
 
 ## How to work
+
 - **Start every session by reading [docs/progress.md](docs/progress.md)** — it lists everything
   already built. Don't rebuild or re-derive what's listed there.
 - One roadmap item at a time (docs/roadmap.md). Use plan mode for big features.

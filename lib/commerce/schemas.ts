@@ -5,7 +5,10 @@ import { ORDER_STAGES } from './types'
  * Zod schemas for fixtures (and later, untrusted Shopify payloads). Tests validate every
  * data/*.json file against these so fixture drift fails CI.
  */
-export const money = z.object({ amount: z.string().regex(/^\d+(\.\d{1,2})?$/), currencyCode: z.literal('USD') })
+export const money = z.object({
+  amount: z.string().regex(/^\d+(\.\d{1,2})?$/),
+  currencyCode: z.literal('USD'),
+})
 export const image = z.object({
   url: z.string().min(1),
   altText: z.string(),
@@ -45,7 +48,10 @@ export const fitment = z
     source: z.string(),
   })
   .refine((f) => f.year_end >= f.year_start, 'year_end before year_start')
-  .refine((f) => f.has_factory_lights === 'no' || f.housings.length > 0, 'factory lights need housings')
+  .refine(
+    (f) => f.has_factory_lights === 'no' || f.housings.length > 0,
+    'factory lights need housings',
+  )
 
 export const vehicle = z.object({
   id: z.string(),
@@ -156,7 +162,13 @@ export const order = z.object({
   stage,
   stageHistory: z.array(z.object({ stage, at: z.string() })),
   lines: z.array(
-    z.object({ title: z.string(), variantTitle: z.string(), quantity: z.number().int().positive(), price: money, attributes: z.array(attribute) }),
+    z.object({
+      title: z.string(),
+      variantTitle: z.string(),
+      quantity: z.number().int().positive(),
+      price: money,
+      attributes: z.array(attribute),
+    }),
   ),
   total: money,
   proofIds: z.array(z.string()),
@@ -164,14 +176,25 @@ export const order = z.object({
   sample: z.boolean(),
 })
 
-export const faq = z.object({ id: z.string(), question: z.string(), answer: z.string(), topics: z.array(z.string()) })
+export const faq = z.object({
+  id: z.string(),
+  question: z.string(),
+  answer: z.string(),
+  topics: z.array(z.string()),
+})
 
 export const businessPricing = z.object({
   base_unit_price: money,
   setup_fee: money,
   lead_time_days: z.number().int().positive(),
   tiers: z.array(
-    z.object({ id: z.string(), min_qty: z.number().int().positive(), max_qty: z.number().int().positive().nullable(), discount_pct: z.number().min(0).max(90), label: z.string() }),
+    z.object({
+      id: z.string(),
+      min_qty: z.number().int().positive(),
+      max_qty: z.number().int().positive().nullable(),
+      discount_pct: z.number().min(0).max(90),
+      label: z.string(),
+    }),
   ),
 })
 

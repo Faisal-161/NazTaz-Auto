@@ -3,7 +3,7 @@ import { useId, type ComponentPropsWithRef, type ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
 export const inputClass = cn(
-  'h-11 w-full rounded-md border border-line bg-bg px-3.5 text-base text-fg placeholder:text-subtle',
+  'h-11 w-full rounded-md border border-line-strong bg-bg px-3.5 text-base text-fg placeholder:text-subtle',
   'transition-[border-color,box-shadow] duration-fast',
   'focus-visible:border-accent focus-visible:shadow-glow-sm focus-visible:outline-none',
   'aria-invalid:border-danger',

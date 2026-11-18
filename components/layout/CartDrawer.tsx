@@ -23,7 +23,7 @@ export function CartDrawer() {
       void _id
       toast({
         title: t.removed(line.title),
-        action: { label: 'Undo', altText: `Undo removing ${line.title}`, onClick: () => add(rest) },
+        action: { label: t.undo, altText: t.undoAlt(line.title), onClick: () => add(rest) },
       })
     }
   }

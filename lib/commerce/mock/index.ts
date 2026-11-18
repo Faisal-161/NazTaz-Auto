@@ -63,7 +63,8 @@ export function createMockAdapter(opts: MockOptions = {}): CommerceAdapter {
   /** Simulate network: optional latency + random failures. Always returns a deep copy. */
   async function call<T>(op: string, fn: () => T): Promise<T> {
     if (latencyMs > 0) await new Promise((r) => setTimeout(r, latencyMs))
-    if (errorRate > 0 && random() < errorRate) throw new CommerceError(`Mock failure in ${op}`, 'UPSTREAM')
+    if (errorRate > 0 && random() < errorRate)
+      throw new CommerceError(`Mock failure in ${op}`, 'UPSTREAM')
     return clone(fn())
   }
 
@@ -130,19 +131,26 @@ export function createMockAdapter(opts: MockOptions = {}): CommerceAdapter {
           sorted.sort((a, b) => (a.best_seller_rank ?? 999) - (b.best_seller_rank ?? 999))
         return paginate(sorted, q)
       }),
-    getProduct: (handle) => call('getProduct', () => db.products.find((p) => p.handle === handle) ?? null),
+    getProduct: (handle) =>
+      call('getProduct', () => db.products.find((p) => p.handle === handle) ?? null),
     getDesigns: (args = {}) =>
       call('getDesigns', () =>
-        paginate(args.category ? db.designs.filter((d) => d.category === args.category) : db.designs, args),
+        paginate(
+          args.category ? db.designs.filter((d) => d.category === args.category) : db.designs,
+          args,
+        ),
       ),
     getDesign: (id) => call('getDesign', () => db.designs.find((d) => d.id === id) ?? null),
 
     getVehicles: () => call('getVehicles', () => db.vehicles),
     getHousings: () => call('getHousings', () => db.housings),
-    getHousing: (code) => call('getHousing', () => db.housings.find((h) => eq(h.code, code)) ?? null),
+    getHousing: (code) =>
+      call('getHousing', () => db.housings.find((h) => eq(h.code, code)) ?? null),
     getFitments: (f = {}) =>
       call('getFitments', () =>
-        db.fitment.filter((r) => (!f.make || eq(r.make, f.make)) && (!f.model || eq(r.model, f.model))),
+        db.fitment.filter(
+          (r) => (!f.make || eq(r.make, f.make)) && (!f.model || eq(r.model, f.model)),
+        ),
       ),
 
     createCart: (lines = []) =>
@@ -187,7 +195,12 @@ export function createMockAdapter(opts: MockOptions = {}): CommerceAdapter {
     getOrders: (email) => call('getOrders', () => db.orders.filter((o) => eq(o.email, email))),
     getOrder: (id) => call('getOrder', () => db.orders.find((o) => o.id === id) ?? null),
     findOrder: (email, number) =>
-      call('findOrder', () => db.orders.find((o) => eq(o.email, email) && o.number === number.replace(/^#/, '')) ?? null),
+      call(
+        'findOrder',
+        () =>
+          db.orders.find((o) => eq(o.email, email) && o.number === number.replace(/^#/, '')) ??
+          null,
+      ),
     getProof: (id) => call('getProof', () => proofs.get(id) ?? null),
     respondToProof: (id, response) =>
       call('respondToProof', () => {
@@ -227,17 +240,24 @@ export function createMockAdapter(opts: MockOptions = {}): CommerceAdapter {
     getGallery: (f = {}) =>
       call('getGallery', () =>
         paginate(
-          db.gallery.filter((g) => (!f.make || eq(g.make, f.make)) && (!f.category || g.design_category === f.category)),
+          db.gallery.filter(
+            (g) =>
+              (!f.make || eq(g.make, f.make)) && (!f.category || g.design_category === f.category),
+          ),
           f,
         ),
       ),
-    getFaqs: (topic) => call('getFaqs', () => (topic ? db.faqs.filter((q) => q.topics.includes(topic)) : db.faqs)),
+    getFaqs: (topic) =>
+      call('getFaqs', () => (topic ? db.faqs.filter((q) => q.topics.includes(topic)) : db.faqs)),
 
     getBusinessPricing: () => call('getBusinessPricing', () => db.businessPricing),
     requestQuote: (request) =>
       call('requestQuote', (): Quote => {
         const bp = db.businessPricing
-        const tier = bp.tiers.find((t) => request.quantity >= t.min_qty && (t.max_qty === null || request.quantity <= t.max_qty))
+        const tier = bp.tiers.find(
+          (t) =>
+            request.quantity >= t.min_qty && (t.max_qty === null || request.quantity <= t.max_qty),
+        )
         if (!tier) throw new CommerceError('Quantity out of range', 'INVALID')
         const unit = Number(bp.base_unit_price.amount) * (1 - tier.discount_pct / 100)
         const setup = Number(bp.setup_fee.amount)

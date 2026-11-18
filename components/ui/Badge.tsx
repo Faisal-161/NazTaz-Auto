@@ -12,7 +12,7 @@ export const badgeVariants = cva(
         verified: 'border-fit-verified/40 bg-fit-verified/10 text-fit-verified',
         likely: 'border-fit-likely/40 bg-fit-likely/10 text-fit-likely',
         check: 'border-fit-check/40 bg-fit-check/10 text-fit-check',
-        sample: 'border-warning/40 bg-warning/10 text-warning uppercase tracking-wide',
+        sample: 'border-warning/40 bg-warning/10 tracking-wide text-warning uppercase',
       },
     },
     defaultVariants: { variant: 'neutral' },

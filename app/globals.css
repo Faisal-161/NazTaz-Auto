@@ -12,6 +12,8 @@
   --color-surface: #0e1219;
   --color-surface-2: #161c26;
   --color-line: #263040;
+  /* Form-control borders: ≥3:1 on bg and surface (WCAG 1.4.11). */
+  --color-line-strong: #5f6b7d;
   --color-fg: #f2f5f8;
   --color-muted: #b6bfcb;
   --color-subtle: #8b96a5;
@@ -63,6 +65,11 @@
   --duration-base: 200ms;
   --duration-slow: 400ms;
   --duration-scene: 900ms;
+  /* Tailwind `duration-*` reads --transition-duration-*; alias so reduced motion collapses them too. */
+  --transition-duration-fast: var(--duration-fast);
+  --transition-duration-base: var(--duration-base);
+  --transition-duration-slow: var(--duration-slow);
+  --transition-duration-scene: var(--duration-scene);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-light: cubic-bezier(0.16, 1, 0.3, 1);
@@ -120,6 +127,7 @@
     --duration-base: 0.01ms;
     --duration-slow: 0.01ms;
     --duration-scene: 0.01ms;
+    --default-transition-duration: 0.01ms;
   }
   *,
   *::before,

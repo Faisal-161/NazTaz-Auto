@@ -22,7 +22,10 @@ export function CartLineItem({ line, onQuantity, onRemove, onNavigate }: Props) 
   const designId = getAttr(line.attributes, ATTR.designId)
   const preview = getAttr(line.attributes, ATTR.designPreview)
   const thumb = preview ?? line.image.url
-  const lineTotal = { amount: (Number(line.unitPrice.amount) * line.quantity).toFixed(2), currencyCode: line.unitPrice.currencyCode }
+  const lineTotal = {
+    amount: (Number(line.unitPrice.amount) * line.quantity).toFixed(2),
+    currencyCode: line.unitPrice.currencyCode,
+  }
 
   return (
     <li className="flex gap-4 py-4">
@@ -56,7 +59,11 @@ export function CartLineItem({ line, onQuantity, onRemove, onNavigate }: Props) 
           ) : null}
         </dl>
         <div className="mt-1 flex items-center justify-between gap-2">
-          <div className="flex items-center rounded-full border border-line" role="group" aria-label={`${t.quantity}: ${line.title}`}>
+          <div
+            className="flex items-center rounded-full border border-line"
+            role="group"
+            aria-label={`${t.quantity}: ${line.title}`}
+          >
             <button
               type="button"
               aria-label={t.decrease(line.title)}

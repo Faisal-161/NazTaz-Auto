@@ -5,9 +5,7 @@
     "location": "door",
     "shape": "oval",
     "connector": "2-pin Ford sealed",
-    "oem_part_numbers": [
-      "SAMPLE-FD-1001"
-    ],
+    "oem_part_numbers": ["SAMPLE-FD-1001"],
     "photo_housing": {
       "url": "/placeholders/housing-oval.svg",
       "altText": "Ford truck door, oval housing (placeholder)",
@@ -31,9 +29,7 @@
     "location": "mirror",
     "shape": "rectangle",
     "connector": "2-pin Ford mirror harness",
-    "oem_part_numbers": [
-      "SAMPLE-FD-1002"
-    ],
+    "oem_part_numbers": ["SAMPLE-FD-1002"],
     "photo_housing": {
       "url": "/placeholders/housing-rect.svg",
       "altText": "Ford truck mirror, rectangle housing (placeholder)",
@@ -57,9 +53,7 @@
     "location": "door",
     "shape": "round",
     "connector": "2-pin Ford compact",
-    "oem_part_numbers": [
-      "SAMPLE-FD-1003"
-    ],
+    "oem_part_numbers": ["SAMPLE-FD-1003"],
     "photo_housing": {
       "url": "/placeholders/housing-round.svg",
       "altText": "Ford coupe door, round housing (placeholder)",
@@ -83,9 +77,7 @@
     "location": "mirror",
     "shape": "rectangle",
     "connector": "2-pin Stellantis mirror",
-    "oem_part_numbers": [
-      "SAMPLE-RM-2001"
-    ],
+    "oem_part_numbers": ["SAMPLE-RM-2001"],
     "photo_housing": {
       "url": "/placeholders/housing-rect.svg",
       "altText": "RAM mirror, rectangle housing (placeholder)",
@@ -109,10 +101,7 @@
     "location": "door",
     "shape": "oval",
     "connector": "2-pin Stellantis door",
-    "oem_part_numbers": [
-      "SAMPLE-ST-2101",
-      "SAMPLE-ST-2102"
-    ],
+    "oem_part_numbers": ["SAMPLE-ST-2101", "SAMPLE-ST-2102"],
     "photo_housing": {
       "url": "/placeholders/housing-oval.svg",
       "altText": "Stellantis door, oval housing (placeholder)",
@@ -136,9 +125,7 @@
     "location": "mirror",
     "shape": "rectangle",
     "connector": "2-pin GM mirror (early)",
-    "oem_part_numbers": [
-      "SAMPLE-GM-3001"
-    ],
+    "oem_part_numbers": ["SAMPLE-GM-3001"],
     "photo_housing": {
       "url": "/placeholders/housing-rect.svg",
       "altText": "GM mirror, early rectangle housing (placeholder)",
@@ -162,9 +149,7 @@
     "location": "mirror",
     "shape": "slim rectangle",
     "connector": "2-pin GM mirror (late)",
-    "oem_part_numbers": [
-      "SAMPLE-GM-3002"
-    ],
+    "oem_part_numbers": ["SAMPLE-GM-3002"],
     "photo_housing": {
       "url": "/placeholders/housing-rect.svg",
       "altText": "GM mirror, late slim housing (placeholder)",
@@ -188,9 +173,7 @@
     "location": "door",
     "shape": "oval",
     "connector": "2-pin GM door",
-    "oem_part_numbers": [
-      "SAMPLE-GM-3101"
-    ],
+    "oem_part_numbers": ["SAMPLE-GM-3101"],
     "photo_housing": {
       "url": "/placeholders/housing-oval.svg",
       "altText": "GM SUV door, oval housing (placeholder)",
@@ -214,9 +197,7 @@
     "location": "door",
     "shape": "rectangle",
     "connector": "2-pin EV door",
-    "oem_part_numbers": [
-      "SAMPLE-TS-4001"
-    ],
+    "oem_part_numbers": ["SAMPLE-TS-4001"],
     "photo_housing": {
       "url": "/placeholders/housing-rect.svg",
       "altText": "EV sedan/crossover door, rectangle housing (placeholder)",
@@ -240,9 +221,7 @@
     "location": "door",
     "shape": "rectangle",
     "connector": "2-pin Toyota",
-    "oem_part_numbers": [
-      "SAMPLE-TY-5001"
-    ],
+    "oem_part_numbers": ["SAMPLE-TY-5001"],
     "photo_housing": {
       "url": "/placeholders/housing-rect.svg",
       "altText": "Toyota sedan door, rectangle housing (placeholder)",
@@ -266,9 +245,7 @@
     "location": "door",
     "shape": "rectangle",
     "connector": "2-pin Honda",
-    "oem_part_numbers": [
-      "SAMPLE-HN-6001"
-    ],
+    "oem_part_numbers": ["SAMPLE-HN-6001"],
     "photo_housing": {
       "url": "/placeholders/housing-rect.svg",
       "altText": "Honda sedan door, rectangle housing (placeholder)",
@@ -292,9 +269,7 @@
     "location": "door",
     "shape": "rectangle",
     "connector": "2-pin Euro A",
-    "oem_part_numbers": [
-      "SAMPLE-BM-7001"
-    ],
+    "oem_part_numbers": ["SAMPLE-BM-7001"],
     "photo_housing": {
       "url": "/placeholders/housing-rect.svg",
       "altText": "German luxury door, rectangle A housing (placeholder)",
@@ -318,9 +293,7 @@
     "location": "door",
     "shape": "rectangle",
     "connector": "2-pin Euro B",
-    "oem_part_numbers": [
-      "SAMPLE-MB-8001"
-    ],
+    "oem_part_numbers": ["SAMPLE-MB-8001"],
     "photo_housing": {
       "url": "/placeholders/housing-rect.svg",
       "altText": "German luxury door, rectangle B housing (placeholder)",

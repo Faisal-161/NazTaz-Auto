@@ -12,11 +12,21 @@ type StateProps = {
   as?: 'h2' | 'h3' | 'p'
 }
 
-export function EmptyState({ icon, title, body, actions, className, as: Title = 'h2' }: StateProps) {
+export function EmptyState({
+  icon,
+  title,
+  body,
+  actions,
+  className,
+  as: Title = 'h2',
+}: StateProps) {
   return (
     <div className={cn('flex flex-col items-center gap-3 px-6 py-10 text-center', className)}>
       {icon ? (
-        <div aria-hidden className="mb-1 flex size-14 items-center justify-center rounded-full bg-accent-soft text-accent shadow-glow-sm [&_svg]:size-6">
+        <div
+          aria-hidden
+          className="mb-1 flex size-14 items-center justify-center rounded-full bg-accent-soft text-accent shadow-glow-sm [&_svg]:size-6"
+        >
           {icon}
         </div>
       ) : null}
@@ -27,10 +37,22 @@ export function EmptyState({ icon, title, body, actions, className, as: Title = 
   )
 }
 
-export function ErrorState({ title, body, actions, className, as: Title = 'h2' }: Omit<StateProps, 'icon'>) {
+export function ErrorState({
+  title,
+  body,
+  actions,
+  className,
+  as: Title = 'h2',
+}: Omit<StateProps, 'icon'>) {
   return (
-    <div role="alert" className={cn('flex flex-col items-center gap-3 px-6 py-10 text-center', className)}>
-      <div aria-hidden className="mb-1 flex size-14 items-center justify-center rounded-full bg-danger/10 text-danger">
+    <div
+      role="alert"
+      className={cn('flex flex-col items-center gap-3 px-6 py-10 text-center', className)}
+    >
+      <div
+        aria-hidden
+        className="mb-1 flex size-14 items-center justify-center rounded-full bg-danger/10 text-danger"
+      >
         <TriangleAlert className="size-6" />
       </div>
       <Title className="font-display text-lg font-semibold">{title}</Title>

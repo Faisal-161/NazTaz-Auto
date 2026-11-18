@@ -9,5 +9,8 @@ export class CommerceError extends Error {
 }
 
 export function notImplemented(operation: string): never {
-  throw new CommerceError(`Shopify adapter: ${operation} is not implemented yet (Phase 2).`, 'NOT_IMPLEMENTED')
+  throw new CommerceError(
+    `Shopify adapter: ${operation} is not implemented yet (Phase 2).`,
+    'NOT_IMPLEMENTED',
+  )
 }

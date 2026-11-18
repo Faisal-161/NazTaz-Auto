@@ -18,18 +18,21 @@ export function Footer() {
           <p className="mt-1 text-sm text-muted">{footer.newsletter.body}</p>
           <div className="mt-4">
             {/* form JS (react-hook-form + zod) loads when the footer scrolls into view */}
-            <NewsletterLazy placeholder={<Skeleton className="h-[4.75rem] w-full" />} />
+            <NewsletterLazy placeholder={<Skeleton className="h-[4.375rem] w-full" />} />
           </div>
         </section>
 
-        <nav aria-label="Footer" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+        <nav aria-label={footer.navLabel} className="grid grid-cols-2 gap-8 sm:grid-cols-3">
           {footerNav.map((col) => (
             <div key={col.title}>
               <h2 className="text-sm font-semibold">{col.title}</h2>
               <ul className="mt-3 grid gap-1">
                 {col.links.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="inline-flex min-h-8 items-center text-sm text-muted hover:text-fg">
+                    <Link
+                      href={l.href}
+                      className="inline-flex min-h-8 items-center text-sm text-muted hover:text-fg"
+                    >
                       {l.label}
                     </Link>
                   </li>

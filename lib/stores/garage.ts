@@ -16,7 +16,18 @@ type GarageState = {
 
 let vehicleSeq = 0
 
-const keyOf =(v: Pick<GarageVehicle, 'year' | 'make' | 'model' | 'trim'>) =>
+export function isGarageVehicle(v: unknown): v is GarageVehicle {
+  if (!v || typeof v !== 'object') return false
+  const g = v as Partial<GarageVehicle>
+  return (
+    typeof g.id === 'string' &&
+    Number.isInteger(g.year) &&
+    typeof g.make === 'string' &&
+    typeof g.model === 'string'
+  )
+}
+
+const keyOf = (v: Pick<GarageVehicle, 'year' | 'make' | 'model' | 'trim'>) =>
   [v.year, v.make, v.model, v.trim ?? ''].join('|').toLowerCase()
 
 export const useGarageStore = create<GarageState>()(
@@ -46,10 +57,26 @@ export const useGarageStore = create<GarageState>()(
         }),
       setActive: (activeId) => set({ activeId }),
     }),
-    { name: 'store.garage.v1', version: 1, storage: createJSONStorage(() => localStorage) },
+    {
+      name: 'store.garage.v1',
+      version: 1,
+      storage: createJSONStorage(() => localStorage),
+      // localStorage is untrusted: keep only well-formed vehicles.
+      merge: (persisted, current) => {
+        const p = (persisted ?? {}) as { vehicles?: unknown; activeId?: unknown }
+        const vehicles = Array.isArray(p.vehicles) ? p.vehicles.filter(isGarageVehicle) : []
+        const activeId =
+          typeof p.activeId === 'string' && vehicles.some((v) => v.id === p.activeId)
+            ? p.activeId
+            : (vehicles[0]?.id ?? null)
+        return { ...current, vehicles, activeId }
+      },
+    },
   ),
 )
 
-export function selectActiveVehicle(s: Pick<GarageState, 'vehicles' | 'activeId'>): GarageVehicle | null {
+export function selectActiveVehicle(
+  s: Pick<GarageState, 'vehicles' | 'activeId'>,
+): GarageVehicle | null {
   return s.vehicles.find((v) => v.id === s.activeId) ?? null
 }

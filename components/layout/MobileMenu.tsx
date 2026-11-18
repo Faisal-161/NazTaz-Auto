@@ -28,7 +28,9 @@ export function MobileMenu() {
                 >
                   <span>
                     <span className="block font-medium">{item.label}</span>
-                    {item.description ? <span className="block text-xs text-subtle">{item.description}</span> : null}
+                    {item.description ? (
+                      <span className="block text-xs text-subtle">{item.description}</span>
+                    ) : null}
                   </span>
                   <ChevronRight aria-hidden className="size-4 text-subtle" />
                 </Link>

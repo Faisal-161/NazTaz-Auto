@@ -117,10 +117,7 @@
         ]
       }
     ],
-    "tags": [
-      "door",
-      "oval"
-    ],
+    "tags": ["door", "oval"],
     "housing_code": "FD-DR-01",
     "lens": "single",
     "location": "door",
@@ -146,17 +143,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -278,10 +269,7 @@
         ]
       }
     ],
-    "tags": [
-      "mirror",
-      "rectangle"
-    ],
+    "tags": ["mirror", "rectangle"],
     "housing_code": "FD-MR-01",
     "lens": "dual",
     "location": "mirror",
@@ -307,17 +295,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -439,10 +421,7 @@
         ]
       }
     ],
-    "tags": [
-      "door",
-      "round"
-    ],
+    "tags": ["door", "round"],
     "housing_code": "FD-DR-02",
     "lens": "single",
     "location": "door",
@@ -468,17 +447,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -600,10 +573,7 @@
         ]
       }
     ],
-    "tags": [
-      "mirror",
-      "rectangle"
-    ],
+    "tags": ["mirror", "rectangle"],
     "housing_code": "RM-MR-01",
     "lens": "dual",
     "location": "mirror",
@@ -629,17 +599,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -761,10 +725,7 @@
         ]
       }
     ],
-    "tags": [
-      "door",
-      "oval"
-    ],
+    "tags": ["door", "oval"],
     "housing_code": "ST-DR-01",
     "lens": "single",
     "location": "door",
@@ -790,17 +751,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -922,10 +877,7 @@
         ]
       }
     ],
-    "tags": [
-      "mirror",
-      "rectangle"
-    ],
+    "tags": ["mirror", "rectangle"],
     "housing_code": "GM-MR-01",
     "lens": "dual",
     "location": "mirror",
@@ -951,17 +903,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -1083,10 +1029,7 @@
         ]
       }
     ],
-    "tags": [
-      "mirror",
-      "slim rectangle"
-    ],
+    "tags": ["mirror", "slim rectangle"],
     "housing_code": "GM-MR-02",
     "lens": "dual",
     "location": "mirror",
@@ -1112,17 +1055,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -1244,10 +1181,7 @@
         ]
       }
     ],
-    "tags": [
-      "door",
-      "oval"
-    ],
+    "tags": ["door", "oval"],
     "housing_code": "GM-DR-01",
     "lens": "single",
     "location": "door",
@@ -1273,17 +1207,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -1405,10 +1333,7 @@
         ]
       }
     ],
-    "tags": [
-      "door",
-      "rectangle"
-    ],
+    "tags": ["door", "rectangle"],
     "housing_code": "TS-DR-01",
     "lens": "single",
     "location": "door",
@@ -1434,17 +1359,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -1566,10 +1485,7 @@
         ]
       }
     ],
-    "tags": [
-      "door",
-      "rectangle"
-    ],
+    "tags": ["door", "rectangle"],
     "housing_code": "TY-DR-01",
     "lens": "single",
     "location": "door",
@@ -1595,17 +1511,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -1727,10 +1637,7 @@
         ]
       }
     ],
-    "tags": [
-      "door",
-      "rectangle"
-    ],
+    "tags": ["door", "rectangle"],
     "housing_code": "HN-DR-01",
     "lens": "single",
     "location": "door",
@@ -1756,17 +1663,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -1888,10 +1789,7 @@
         ]
       }
     ],
-    "tags": [
-      "door",
-      "rectangle"
-    ],
+    "tags": ["door", "rectangle"],
     "housing_code": "BM-DR-01",
     "lens": "single",
     "location": "door",
@@ -1917,17 +1815,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -2049,10 +1941,7 @@
         ]
       }
     ],
-    "tags": [
-      "door",
-      "rectangle"
-    ],
+    "tags": ["door", "rectangle"],
     "housing_code": "MB-DR-01",
     "lens": "single",
     "location": "door",
@@ -2078,17 +1967,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -2196,10 +2079,7 @@
         ]
       }
     ],
-    "tags": [
-      "universal",
-      "wireless"
-    ],
+    "tags": ["universal", "wireless"],
     "housing_code": null,
     "lens": "single",
     "location": "universal",
@@ -2225,17 +2105,11 @@
     "options": [
       {
         "name": "Lights",
-        "values": [
-          "2",
-          "4"
-        ]
+        "values": ["2", "4"]
       },
       {
         "name": "Design",
-        "values": [
-          "Pre-made",
-          "Custom"
-        ]
+        "values": ["Pre-made", "Custom"]
       }
     ]
   },
@@ -2266,10 +2140,7 @@
     "options": [
       {
         "name": "Level",
-        "values": [
-          "Clean-up",
-          "From scratch"
-        ]
+        "values": ["Clean-up", "From scratch"]
       }
     ],
     "variants": [
@@ -2306,18 +2177,12 @@
         ]
       }
     ],
-    "tags": [
-      "service"
-    ],
+    "tags": ["service"],
     "housing_code": null,
     "lens": "single",
     "location": "universal",
     "lead_time_days": 2,
-    "in_the_box": [
-      "Lens-ready vector art",
-      "Projection preview",
-      "Up to 2 revisions"
-    ],
+    "in_the_box": ["Lens-ready vector art", "Projection preview", "Up to 2 revisions"],
     "warranty_years": 1,
     "best_seller_rank": null
   }

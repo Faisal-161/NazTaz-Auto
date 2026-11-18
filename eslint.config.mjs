@@ -25,10 +25,16 @@ const eslintConfig = defineConfig([
           patterns: [
             {
               group: ['@/data/*', '**/data/*.json'],
-              message: 'Read data through lib/commerce (getCommerce / queries), never fixtures directly.',
+              message:
+                'Read data through lib/commerce (getCommerce / queries), never fixtures directly.',
             },
             {
-              group: ['@/lib/commerce/mock', '@/lib/commerce/mock/*', '@/lib/commerce/shopify', '@/lib/commerce/shopify/*'],
+              group: [
+                '@/lib/commerce/mock',
+                '@/lib/commerce/mock/*',
+                '@/lib/commerce/shopify',
+                '@/lib/commerce/shopify/*',
+              ],
               message: 'Import from @/lib/commerce, not a specific adapter.',
             },
           ],

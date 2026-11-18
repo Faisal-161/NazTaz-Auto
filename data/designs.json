@@ -6,9 +6,7 @@
     "category": "names",
     "kind": "premade",
     "artUrl": "/placeholders/design-names.svg",
-    "tags": [
-      "names"
-    ],
+    "tags": ["names"],
     "sample": true
   },
   {
@@ -18,9 +16,7 @@
     "category": "names",
     "kind": "premade",
     "artUrl": "/placeholders/design-names.svg",
-    "tags": [
-      "names"
-    ],
+    "tags": ["names"],
     "sample": true
   },
   {
@@ -30,9 +26,7 @@
     "category": "initials",
     "kind": "premade",
     "artUrl": "/placeholders/design-initials.svg",
-    "tags": [
-      "initials"
-    ],
+    "tags": ["initials"],
     "sample": true
   },
   {
@@ -42,9 +36,7 @@
     "category": "initials",
     "kind": "premade",
     "artUrl": "/placeholders/design-initials.svg",
-    "tags": [
-      "initials"
-    ],
+    "tags": ["initials"],
     "sample": true
   },
   {
@@ -54,9 +46,7 @@
     "category": "wedding",
     "kind": "premade",
     "artUrl": "/placeholders/design-wedding.svg",
-    "tags": [
-      "wedding"
-    ],
+    "tags": ["wedding"],
     "sample": true
   },
   {
@@ -66,9 +56,7 @@
     "category": "wedding",
     "kind": "premade",
     "artUrl": "/placeholders/design-wedding.svg",
-    "tags": [
-      "wedding"
-    ],
+    "tags": ["wedding"],
     "sample": true
   },
   {
@@ -78,9 +66,7 @@
     "category": "business",
     "kind": "premade",
     "artUrl": "/placeholders/design-business.svg",
-    "tags": [
-      "business"
-    ],
+    "tags": ["business"],
     "sample": true
   },
   {
@@ -90,9 +76,7 @@
     "category": "business",
     "kind": "premade",
     "artUrl": "/placeholders/design-business.svg",
-    "tags": [
-      "business"
-    ],
+    "tags": ["business"],
     "sample": true
   },
   {
@@ -102,9 +86,7 @@
     "category": "enthusiast",
     "kind": "premade",
     "artUrl": "/placeholders/design-enthusiast.svg",
-    "tags": [
-      "enthusiast"
-    ],
+    "tags": ["enthusiast"],
     "sample": true
   },
   {
@@ -114,9 +96,7 @@
     "category": "enthusiast",
     "kind": "premade",
     "artUrl": "/placeholders/design-enthusiast.svg",
-    "tags": [
-      "enthusiast"
-    ],
+    "tags": ["enthusiast"],
     "sample": true
   },
   {
@@ -126,9 +106,7 @@
     "category": "enthusiast",
     "kind": "premade",
     "artUrl": "/placeholders/design-enthusiast.svg",
-    "tags": [
-      "enthusiast"
-    ],
+    "tags": ["enthusiast"],
     "sample": true
   },
   {
@@ -138,9 +116,7 @@
     "category": "pattern",
     "kind": "premade",
     "artUrl": "/placeholders/design-pattern.svg",
-    "tags": [
-      "pattern"
-    ],
+    "tags": ["pattern"],
     "sample": true
   },
   {
@@ -150,9 +126,7 @@
     "category": "pattern",
     "kind": "premade",
     "artUrl": "/placeholders/design-pattern.svg",
-    "tags": [
-      "pattern"
-    ],
+    "tags": ["pattern"],
     "sample": true
   },
   {
@@ -162,9 +136,7 @@
     "category": "pattern",
     "kind": "premade",
     "artUrl": "/placeholders/design-pattern.svg",
-    "tags": [
-      "pattern"
-    ],
+    "tags": ["pattern"],
     "sample": true
   }
 ]

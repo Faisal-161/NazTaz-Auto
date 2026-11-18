@@ -15,7 +15,13 @@ const sampleCart = {
         variantTitle: '2 lights / Custom',
         unitPrice: { amount: '159.00', currencyCode: 'USD' },
         quantity: 1,
-        image: { url: '/placeholders/product-night.svg', altText: '', width: 1200, height: 900, placeholder: true },
+        image: {
+          url: '/placeholders/product-night.svg',
+          altText: '',
+          width: 1200,
+          height: 900,
+          placeholder: true,
+        },
         attributes: [
           { key: '_vehicle', value: '2022 Ford F-150 XLT' },
           { key: '_housing_code', value: 'FD-DR-01' },
@@ -30,7 +36,17 @@ const sampleCart = {
 }
 const sampleGarage = {
   state: {
-    vehicles: [{ id: 'veh_sample', year: 2022, make: 'Ford', model: 'F-150', trim: 'XLT', housing_code: 'FD-DR-01', fit_method: 'picker' }],
+    vehicles: [
+      {
+        id: 'veh_sample',
+        year: 2022,
+        make: 'Ford',
+        model: 'F-150',
+        trim: 'XLT',
+        housing_code: 'FD-DR-01',
+        fit_method: 'picker',
+      },
+    ],
     activeId: 'veh_sample',
   },
   version: 1,
@@ -46,19 +62,32 @@ async function seed(page: Page) {
   )
 }
 
+/** Routes linked from the layout that are not built yet. TODO(1B): remove once /products/[handle] exists. */
+const NOT_BUILT_YET = [/^\/products\//]
+
 function watchConsole(page: Page) {
   const errors: string[] = []
-  page.on('console', (m) => m.type() === 'error' && errors.push(m.text()))
+  page.on('console', (m) => {
+    if (m.type() === 'error' && !m.text().startsWith('Failed to load resource'))
+      errors.push(m.text())
+  })
   page.on('pageerror', (e) => errors.push(e.message))
+  page.on('response', (r) => {
+    if (r.status() >= 400 && !NOT_BUILT_YET.some((re) => re.test(new URL(r.url()).pathname)))
+      errors.push(`HTTP ${r.status()} ${r.url()}`)
+  })
   return errors
 }
 
-const shot = (page: Page, name: string) => page.screenshot({ path: `.artifacts/screenshots/${name}.png` })
+const shot = (page: Page, name: string) =>
+  page.screenshot({ path: `.artifacts/screenshots/${name}.png` })
 
 test.describe('desktop 1440', () => {
   test.use({ viewport: { width: 1440, height: 900 } })
 
-  test('skip link, header tab order, cart drawer focus trap + Esc returns focus', async ({ page }) => {
+  test('skip link, header tab order, cart drawer focus trap + Esc returns focus', async ({
+    page,
+  }) => {
     const errors = watchConsole(page)
     await seed(page)
     await page.goto('/')
@@ -141,7 +170,9 @@ test.describe('mobile 390', () => {
 
   test('no horizontal scroll at 390', async ({ page }) => {
     await page.goto('/')
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth - window.innerWidth,
+    )
     expect(overflow).toBeLessThanOrEqual(0)
   })
 })

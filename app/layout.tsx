@@ -26,12 +26,16 @@ export const viewport = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en" className={`${inter.variable} ${display.variable} antialiased`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${display.variable} antialiased`}
+      suppressHydrationWarning
+    >
       <head>
         {/* Applies dismissed-announcement state before paint (no flash, no CLS). */}
         <script dangerouslySetInnerHTML={{ __html: announcementScript(announcement.id) }} />
       </head>
-      <body className="flex min-h-dvh flex-col pb-20 lg:pb-0">
+      <body className="flex min-h-dvh flex-col pb-[calc(5rem+env(safe-area-inset-bottom))] lg:pb-0">
         <a
           href="#main"
           className="sr-only z-toast rounded-full bg-accent px-4 py-2 font-medium text-accent-fg focus:not-sr-only focus:fixed focus:top-3 focus:left-3"

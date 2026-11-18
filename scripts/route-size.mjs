@@ -42,7 +42,12 @@ function gzSize(src) {
 
 const rows = []
 for (const file of walk(appDir)) {
-  let route = '/' + path.relative(appDir, file).replace(/\\/g, '/').replace(/\.html$/, '')
+  let route =
+    '/' +
+    path
+      .relative(appDir, file)
+      .replace(/\\/g, '/')
+      .replace(/\.html$/, '')
   route = route.replace(/\/index$/, '') || '/'
   if (route === '/index') route = '/'
   if (route.startsWith('/_')) continue // _not-found, _global-error
@@ -70,7 +75,9 @@ for (const r of rows) {
   const over = budget && r.kb > budget.limit
   if (over) failed = true
   const mark = budget ? `${over ? 'FAIL' : 'ok'} (< ${budget.limit} ${budget.name})` : ''
-  console.log(r.route.padEnd(44) + r.kb.toFixed(1).padStart(9) + String(r.chunks).padStart(8) + '  ' + mark)
+  console.log(
+    r.route.padEnd(44) + r.kb.toFixed(1).padStart(9) + String(r.chunks).padStart(8) + '  ' + mark,
+  )
 }
 if (!rows.length) {
   console.error('No prerendered HTML found.')

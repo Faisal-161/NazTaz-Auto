@@ -8,7 +8,13 @@
 export type CurrencyCode = 'USD'
 /** Shopify MoneyV2 */
 export type Money = { amount: string; currencyCode: CurrencyCode }
-export type Image = { url: string; altText: string; width: number; height: number; placeholder?: boolean }
+export type Image = {
+  url: string
+  altText: string
+  width: number
+  height: number
+  placeholder?: boolean
+}
 
 /** Shopify-style connection for cursor pagination. */
 export type PageInfo = { hasNextPage: boolean; endCursor: string | null }
@@ -111,7 +117,8 @@ export type Product = {
   best_seller_rank: number | null
 }
 
-export type DesignCategory = 'names' | 'initials' | 'wedding' | 'business' | 'enthusiast' | 'pattern'
+export type DesignCategory =
+  'names' | 'initials' | 'wedding' | 'business' | 'enthusiast' | 'pattern'
 export type Design = {
   id: string
   handle: string
@@ -164,7 +171,13 @@ export const ORDER_STAGES = [
 export type OrderStage = (typeof ORDER_STAGES)[number]
 
 export type ProofStatus = 'pending' | 'approved' | 'changes_requested'
-export type ProofComment = { id: string; author: 'customer' | 'studio'; body: string; at: string; attachmentUrl?: string }
+export type ProofComment = {
+  id: string
+  author: 'customer' | 'studio'
+  body: string
+  at: string
+  attachmentUrl?: string
+}
 export type Proof = {
   id: string
   orderId: string
@@ -231,8 +244,19 @@ export type GalleryItem = {
 export type Faq = { id: string; question: string; answer: string; topics: string[] }
 
 // ---------- Business ----------
-export type PricingTier = { id: string; min_qty: number; max_qty: number | null; discount_pct: number; label: string }
-export type BusinessPricing = { base_unit_price: Money; setup_fee: Money; tiers: PricingTier[]; lead_time_days: number }
+export type PricingTier = {
+  id: string
+  min_qty: number
+  max_qty: number | null
+  discount_pct: number
+  label: string
+}
+export type BusinessPricing = {
+  base_unit_price: Money
+  setup_fee: Money
+  tiers: PricingTier[]
+  lead_time_days: number
+}
 export type QuoteRequest = {
   company: string
   contactName: string
@@ -288,11 +312,20 @@ export interface CommerceAdapter {
   getOrder(id: string): Promise<Order | null>
   findOrder(email: string, orderNumber: string): Promise<Order | null>
   getProof(id: string): Promise<Proof | null>
-  respondToProof(id: string, response: { action: 'approve' } | { action: 'request_changes'; comment: string; attachmentUrl?: string }): Promise<Proof>
+  respondToProof(
+    id: string,
+    response:
+      | { action: 'approve' }
+      | { action: 'request_changes'; comment: string; attachmentUrl?: string },
+  ): Promise<Proof>
 
   // social proof + content
-  getReviews(filter?: PageArgs & { productHandle?: string; housingCode?: string; category?: DesignCategory }): Promise<Connection<Review>>
-  getGallery(filter?: PageArgs & { make?: string; category?: DesignCategory }): Promise<Connection<GalleryItem>>
+  getReviews(
+    filter?: PageArgs & { productHandle?: string; housingCode?: string; category?: DesignCategory },
+  ): Promise<Connection<Review>>
+  getGallery(
+    filter?: PageArgs & { make?: string; category?: DesignCategory },
+  ): Promise<Connection<GalleryItem>>
   getFaqs(topic?: string): Promise<Faq[]>
 
   // business

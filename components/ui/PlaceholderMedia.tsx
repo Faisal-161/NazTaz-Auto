@@ -7,8 +7,8 @@ type Props = {
   image: Image
   /** Required: next/image sizes for responsive loading. */
   sizes: string
-  /** Only the page's LCP image. */
-  priority?: boolean
+  /** Only the page's LCP image (Next 16: `preload` replaces deprecated `priority`). */
+  preload?: boolean
   className?: string
   imgClassName?: string
 }
@@ -17,7 +17,7 @@ type Props = {
  * Renders a commerce image. Placeholder images (image.placeholder) get a visible label so they
  * can never be mistaken for real product photos.
  */
-export function PlaceholderMedia({ image, sizes, priority, className, imgClassName }: Props) {
+export function PlaceholderMedia({ image, sizes, preload, className, imgClassName }: Props) {
   return (
     <div
       className={cn('relative overflow-hidden bg-surface-2', className)}
@@ -28,7 +28,7 @@ export function PlaceholderMedia({ image, sizes, priority, className, imgClassNa
         alt={image.altText}
         fill
         sizes={sizes}
-        priority={priority}
+        preload={preload}
         className={cn('object-cover', imgClassName)}
       />
       {image.placeholder ? (

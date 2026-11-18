@@ -24,13 +24,27 @@ export default defineConfig({
     ...(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {}),
   },
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'], ...(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {}) }, testIgnore: capture },
+    {
+      name: 'chromium',
+      use: {
+        ...devices['Desktop Chrome'],
+        ...(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {}),
+      },
+      testIgnore: capture,
+    },
     {
       name: 'reduced-motion',
       use: { ...devices['Pixel 7'], contextOptions: { reducedMotion: 'reduce' } },
       testIgnore: capture,
     },
-    { name: 'shots', testMatch: capture, use: { ...devices['Desktop Chrome'], ...(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {}) } },
+    {
+      name: 'shots',
+      testMatch: capture,
+      use: {
+        ...devices['Desktop Chrome'],
+        ...(process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {}),
+      },
+    },
   ],
   webServer: {
     command: prod ? `pnpm start --port ${PORT}` : `pnpm dev --port ${PORT}`,

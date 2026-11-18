@@ -48,9 +48,7 @@
       "amount": "159.00",
       "currencyCode": "USD"
     },
-    "proofIds": [
-      "prf_1001_1"
-    ],
+    "proofIds": ["prf_1001_1"],
     "tracking": null,
     "sample": true
   },
@@ -111,9 +109,7 @@
       "amount": "134.00",
       "currencyCode": "USD"
     },
-    "proofIds": [
-      "prf_1002_1"
-    ],
+    "proofIds": ["prf_1002_1"],
     "tracking": null,
     "sample": true
   },
@@ -178,9 +174,7 @@
       "amount": "54.00",
       "currencyCode": "USD"
     },
-    "proofIds": [
-      "prf_1003_1"
-    ],
+    "proofIds": ["prf_1003_1"],
     "tracking": {
       "carrier": "USPS",
       "number": "SAMPLE9400100000000000000",

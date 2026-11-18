@@ -3,6 +3,7 @@
 Newest first. Format: date, decision, why.
 
 ## 2026-11-18: Phase 1A foundation choices
+
 - **Next.js 16.4 with `cacheComponents` + `partialPrefetching`** (create-next-app defaults). This gives a
   static shell plus streaming, which matches the LCP goal. The cost is explicit `'use cache'` on data reads.
 - **TypeScript 5.9** (not 7.x): create-next-app pins `^5`; TS 7 tooling compatibility with Next and
@@ -20,9 +21,11 @@ Newest first. Format: date, decision, why.
   type definitions.
 
 ## Open questions (waiting on founder)
+
 See the bottom of the first session summary. Answers are recorded here as they arrive.
 
 ## 2026-11-18: Phase 1A performance findings
+
 - Next 16 `next build` no longer prints first-load JS sizes, so `scripts/route-size.mjs` measures gzip
   from prerendered HTML (excluding `noModule` polyfills).
 - Framework baseline is ~129 KB gz (React DOM ~72 + Next runtime ~45 + misc). Home sits at 145 KB.

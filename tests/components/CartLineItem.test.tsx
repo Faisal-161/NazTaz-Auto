@@ -26,18 +26,29 @@ const line: ClientCartLine = {
 
 describe('CartLineItem', () => {
   it('shows vehicle, housing, line total and an edit-design link', () => {
-    render(<ul><CartLineItem line={line} onQuantity={() => {}} onRemove={() => {}} /></ul>)
+    render(
+      <ul>
+        <CartLineItem line={line} onQuantity={() => {}} onRemove={() => {}} />
+      </ul>,
+    )
     expect(screen.getByText('2022 Ford F-150 XLT')).toBeInTheDocument()
     expect(screen.getByText('FD-DR-01')).toBeInTheDocument()
     expect(screen.getByText('$318')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /edit design/i })).toHaveAttribute('href', '/studio?line=l1')
+    expect(screen.getByRole('link', { name: /edit design/i })).toHaveAttribute(
+      'href',
+      '/studio?line=l1',
+    )
   })
 
   it('quantity and remove buttons are keyboard operable with accessible names', async () => {
     const onQuantity = vi.fn()
     const onRemove = vi.fn()
     const user = userEvent.setup()
-    render(<ul><CartLineItem line={line} onQuantity={onQuantity} onRemove={onRemove} /></ul>)
+    render(
+      <ul>
+        <CartLineItem line={line} onQuantity={onQuantity} onRemove={onRemove} />
+      </ul>,
+    )
     screen.getByRole('button', { name: /increase quantity/i }).focus()
     await user.keyboard('{Enter}')
     expect(onQuantity).toHaveBeenCalledWith(3)

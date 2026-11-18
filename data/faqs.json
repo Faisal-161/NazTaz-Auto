@@ -3,66 +3,42 @@
     "id": "faq_fit",
     "question": "How do I know the lights fit my vehicle?",
     "answer": "Use the fit finder: pick your year, make and model, then tap the photo that matches your light housing. If you are unsure, enter a part number or VIN, or send a photo for review before you order.",
-    "topics": [
-      "fitment",
-      "home",
-      "product"
-    ]
+    "topics": ["fitment", "home", "product"]
   },
   {
     "id": "faq_install",
     "question": "How long does install take?",
     "answer": "Most plug-in lights install in about 10 minutes with the included trim tool. Each housing has a step-by-step guide.",
-    "topics": [
-      "install",
-      "home",
-      "product"
-    ]
+    "topics": ["install", "home", "product"]
   },
   {
     "id": "faq_fade",
     "question": "Will the design fade?",
     "answer": "No. The design is etched into a glass lens, not printed film, so it does not fade.",
-    "topics": [
-      "product",
-      "home"
-    ]
+    "topics": ["product", "home"]
   },
   {
     "id": "faq_proof",
     "question": "Do I see my design before you make it?",
     "answer": "Yes. Custom orders get a proof to approve, with 2 free revisions. We only start engraving after you approve.",
-    "topics": [
-      "proof",
-      "home",
-      "product"
-    ]
+    "topics": ["proof", "home", "product"]
   },
   {
     "id": "faq_ship",
     "question": "When will my order ship?",
     "answer": "Each product shows how many days after proof approval it ships. You can follow every stage in your account or on the tracking page.",
-    "topics": [
-      "shipping",
-      "home"
-    ]
+    "topics": ["shipping", "home"]
   },
   {
     "id": "faq_logos",
     "question": "Can I use a car brand logo?",
     "answer": "No. We cannot engrave vehicle-maker logos or other trademarks you do not own. Use your own name, initials, artwork or business logo.",
-    "topics": [
-      "design",
-      "product"
-    ]
+    "topics": ["design", "product"]
   },
   {
     "id": "faq_gift",
     "question": "Can I give these as a gift before the design is ready?",
     "answer": "Yes. Gift mode lets you buy now and send the recipient a link to design their own.",
-    "topics": [
-      "gift",
-      "home"
-    ]
+    "topics": ["gift", "home"]
   }
 ]

@@ -45,7 +45,9 @@ export function NewsletterForm() {
           inputMode="email"
           placeholder={t.placeholder}
           aria-invalid={error ? true : undefined}
-          aria-describedby={error ? 'newsletter-error' : isSubmitSuccessful ? 'newsletter-success' : undefined}
+          aria-describedby={
+            error ? 'newsletter-error' : isSubmitSuccessful ? 'newsletter-success' : undefined
+          }
           className={cn(inputClass, 'flex-1')}
           {...register('email')}
         />
@@ -53,7 +55,11 @@ export function NewsletterForm() {
           {t.submit}
         </Button>
       </div>
-      <p id="newsletter-error" className={cn('min-h-5 text-xs', error ? 'text-danger' : 'text-success')} aria-live="polite">
+      <p
+        id="newsletter-error"
+        className={cn('min-h-5 text-xs', error ? 'text-danger' : 'text-success')}
+        aria-live="polite"
+      >
         {error ?? (isSubmitSuccessful ? <span id="newsletter-success">{t.success}</span> : null)}
       </p>
     </form>

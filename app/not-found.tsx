@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/Button'
 import { states } from '@/content/layout'
 import { pageMetadata } from '@/lib/seo/metadata'
 
-export const metadata = pageMetadata({ title: 'Page not found' })
+export const metadata = pageMetadata({ title: states.notFound.metaTitle })
 
 export default function NotFound() {
   const t = states.notFound

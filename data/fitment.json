@@ -6,18 +6,9 @@
     "generation": "14th gen",
     "year_start": 2021,
     "year_end": 2025,
-    "trims": [
-      "XLT",
-      "Lariat",
-      "King Ranch",
-      "Platinum",
-      "Limited"
-    ],
+    "trims": ["XLT", "Lariat", "King Ranch", "Platinum", "Limited"],
     "has_factory_lights": "some",
-    "housings": [
-      "FD-DR-01",
-      "FD-MR-01"
-    ],
+    "housings": ["FD-DR-01", "FD-MR-01"],
     "confidence": "verified",
     "verified_installs": 0,
     "source": "sample"
@@ -29,16 +20,9 @@
     "generation": "13th gen",
     "year_start": 2015,
     "year_end": 2020,
-    "trims": [
-      "Lariat",
-      "King Ranch",
-      "Platinum",
-      "Limited"
-    ],
+    "trims": ["Lariat", "King Ranch", "Platinum", "Limited"],
     "has_factory_lights": "some",
-    "housings": [
-      "FD-MR-01"
-    ],
+    "housings": ["FD-MR-01"],
     "confidence": "likely",
     "verified_installs": 0,
     "source": "sample"
@@ -50,15 +34,9 @@
     "generation": "5th gen (DT)",
     "year_start": 2019,
     "year_end": 2025,
-    "trims": [
-      "Laramie",
-      "Limited",
-      "Longhorn"
-    ],
+    "trims": ["Laramie", "Limited", "Longhorn"],
     "has_factory_lights": "some",
-    "housings": [
-      "RM-MR-01"
-    ],
+    "housings": ["RM-MR-01"],
     "confidence": "verified",
     "verified_installs": 0,
     "source": "sample"
@@ -70,14 +48,9 @@
     "generation": "4th gen",
     "year_start": 2019,
     "year_end": 2021,
-    "trims": [
-      "LTZ",
-      "High Country"
-    ],
+    "trims": ["LTZ", "High Country"],
     "has_factory_lights": "some",
-    "housings": [
-      "GM-MR-01"
-    ],
+    "housings": ["GM-MR-01"],
     "confidence": "verified",
     "verified_installs": 0,
     "source": "sample"
@@ -89,14 +62,9 @@
     "generation": "4th gen",
     "year_start": 2022,
     "year_end": 2025,
-    "trims": [
-      "LTZ",
-      "High Country"
-    ],
+    "trims": ["LTZ", "High Country"],
     "has_factory_lights": "some",
-    "housings": [
-      "GM-MR-02"
-    ],
+    "housings": ["GM-MR-02"],
     "confidence": "likely",
     "verified_installs": 0,
     "source": "sample"
@@ -110,9 +78,7 @@
     "year_end": 2025,
     "trims": [],
     "has_factory_lights": "yes",
-    "housings": [
-      "TS-DR-01"
-    ],
+    "housings": ["TS-DR-01"],
     "confidence": "verified",
     "verified_installs": 0,
     "source": "sample"
@@ -126,9 +92,7 @@
     "year_end": 2023,
     "trims": [],
     "has_factory_lights": "yes",
-    "housings": [
-      "TS-DR-01"
-    ],
+    "housings": ["TS-DR-01"],
     "confidence": "verified",
     "verified_installs": 0,
     "source": "sample"
@@ -142,9 +106,7 @@
     "year_end": 2025,
     "trims": [],
     "has_factory_lights": "yes",
-    "housings": [
-      "TS-DR-01"
-    ],
+    "housings": ["TS-DR-01"],
     "confidence": "verified",
     "verified_installs": 0,
     "source": "sample"
@@ -156,15 +118,9 @@
     "generation": "3rd gen",
     "year_start": 2015,
     "year_end": 2023,
-    "trims": [
-      "SXT",
-      "R/T",
-      "Scat Pack"
-    ],
+    "trims": ["SXT", "R/T", "Scat Pack"],
     "has_factory_lights": "some",
-    "housings": [
-      "ST-DR-01"
-    ],
+    "housings": ["ST-DR-01"],
     "confidence": "likely",
     "verified_installs": 0,
     "source": "sample"
@@ -176,15 +132,9 @@
     "generation": "7th gen",
     "year_start": 2015,
     "year_end": 2023,
-    "trims": [
-      "GT",
-      "R/T",
-      "Scat Pack"
-    ],
+    "trims": ["GT", "R/T", "Scat Pack"],
     "has_factory_lights": "some",
-    "housings": [
-      "ST-DR-01"
-    ],
+    "housings": ["ST-DR-01"],
     "confidence": "likely",
     "verified_installs": 0,
     "source": "sample"
@@ -196,14 +146,9 @@
     "generation": "8th gen",
     "year_start": 2018,
     "year_end": 2024,
-    "trims": [
-      "XLE",
-      "XSE"
-    ],
+    "trims": ["XLE", "XSE"],
     "has_factory_lights": "some",
-    "housings": [
-      "TY-DR-01"
-    ],
+    "housings": ["TY-DR-01"],
     "confidence": "unverified",
     "verified_installs": 0,
     "source": "sample"
@@ -215,13 +160,9 @@
     "generation": "10th gen",
     "year_start": 2018,
     "year_end": 2022,
-    "trims": [
-      "Touring"
-    ],
+    "trims": ["Touring"],
     "has_factory_lights": "some",
-    "housings": [
-      "HN-DR-01"
-    ],
+    "housings": ["HN-DR-01"],
     "confidence": "unverified",
     "verified_installs": 0,
     "source": "sample"
@@ -249,9 +190,7 @@
     "year_end": 2025,
     "trims": [],
     "has_factory_lights": "yes",
-    "housings": [
-      "GM-DR-01"
-    ],
+    "housings": ["GM-DR-01"],
     "confidence": "verified",
     "verified_installs": 0,
     "source": "sample"
@@ -265,9 +204,7 @@
     "year_end": 2025,
     "trims": [],
     "has_factory_lights": "yes",
-    "housings": [
-      "GM-DR-01"
-    ],
+    "housings": ["GM-DR-01"],
     "confidence": "verified",
     "verified_installs": 0,
     "source": "sample"
@@ -281,9 +218,7 @@
     "year_end": 2025,
     "trims": [],
     "has_factory_lights": "yes",
-    "housings": [
-      "GM-DR-01"
-    ],
+    "housings": ["GM-DR-01"],
     "confidence": "likely",
     "verified_installs": 0,
     "source": "sample"
@@ -295,14 +230,9 @@
     "generation": "WL",
     "year_start": 2022,
     "year_end": 2025,
-    "trims": [
-      "Overland",
-      "Summit"
-    ],
+    "trims": ["Overland", "Summit"],
     "has_factory_lights": "some",
-    "housings": [
-      "ST-DR-01"
-    ],
+    "housings": ["ST-DR-01"],
     "confidence": "likely",
     "verified_installs": 0,
     "source": "sample"
@@ -314,13 +244,9 @@
     "generation": "6th gen (S550)",
     "year_start": 2015,
     "year_end": 2023,
-    "trims": [
-      "GT Premium"
-    ],
+    "trims": ["GT Premium"],
     "has_factory_lights": "some",
-    "housings": [
-      "FD-DR-02"
-    ],
+    "housings": ["FD-DR-02"],
     "confidence": "likely",
     "verified_installs": 0,
     "source": "sample"
@@ -334,9 +260,7 @@
     "year_end": 2023,
     "trims": [],
     "has_factory_lights": "yes",
-    "housings": [
-      "BM-DR-01"
-    ],
+    "housings": ["BM-DR-01"],
     "confidence": "unverified",
     "verified_installs": 0,
     "source": "sample"
@@ -350,9 +274,7 @@
     "year_end": 2025,
     "trims": [],
     "has_factory_lights": "yes",
-    "housings": [
-      "MB-DR-01"
-    ],
+    "housings": ["MB-DR-01"],
     "confidence": "unverified",
     "verified_installs": 0,
     "source": "sample"

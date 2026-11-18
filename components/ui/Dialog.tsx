@@ -17,7 +17,14 @@ type DialogContentProps = ComponentPropsWithRef<typeof D.Content> & {
   closeLabel: string
 }
 
-export function DialogContent({ title, description, closeLabel, className, children, ...props }: DialogContentProps) {
+export function DialogContent({
+  title,
+  description,
+  closeLabel,
+  className,
+  children,
+  ...props
+}: DialogContentProps) {
   const returnFocus = useReturnFocus()
   return (
     <D.Portal>
@@ -47,7 +54,9 @@ export function DialogContent({ title, description, closeLabel, className, child
             <X aria-hidden className="size-5" />
           </D.Close>
         </div>
-        {description ? <D.Description className="mb-4 text-sm text-muted">{description}</D.Description> : null}
+        {description ? (
+          <D.Description className="mb-4 text-sm text-muted">{description}</D.Description>
+        ) : null}
         {children}
       </D.Content>
     </D.Portal>

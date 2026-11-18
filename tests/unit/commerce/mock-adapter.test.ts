@@ -13,12 +13,18 @@ describe('paginate', () => {
     const p1 = paginate(items, { first: 3 })
     expect(p1.nodes).toEqual([0, 1, 2])
     expect(p1.pageInfo.hasNextPage).toBe(true)
-    const p3 = paginate(items, { first: 3, after: paginate(items, { first: 3, after: p1.pageInfo.endCursor }).pageInfo.endCursor })
+    const p3 = paginate(items, {
+      first: 3,
+      after: paginate(items, { first: 3, after: p1.pageInfo.endCursor }).pageInfo.endCursor,
+    })
     expect(p3.nodes).toEqual([6])
     expect(p3.pageInfo).toEqual({ hasNextPage: false, endCursor: 'cursor:6' })
   })
   it('returns an empty page past the end', () => {
-    expect(paginate(items, { after: 'cursor:6' })).toEqual({ nodes: [], pageInfo: { hasNextPage: false, endCursor: null } })
+    expect(paginate(items, { after: 'cursor:6' })).toEqual({
+      nodes: [],
+      pageInfo: { hasNextPage: false, endCursor: null },
+    })
   })
   it('rejects garbage cursors', () => {
     expect(() => decodeCursor('nope')).toThrow()
@@ -65,7 +71,9 @@ describe('mock adapter: cart (Cart API shape)', () => {
     expect(cart.totalQuantity).toBe(0)
   })
   it('rejects unknown merchandise', async () => {
-    await expect(mock().createCart([{ merchandiseId: 'x', quantity: 1 }])).rejects.toBeInstanceOf(CommerceError)
+    await expect(mock().createCart([{ merchandiseId: 'x', quantity: 1 }])).rejects.toBeInstanceOf(
+      CommerceError,
+    )
   })
 })
 
@@ -76,13 +84,25 @@ describe('mock adapter: orders, proofs, quotes', () => {
   })
   it('requests a change, counting revisions, then refuses when none are left', async () => {
     const a = mock()
-    const p = await a.respondToProof('prf_1001_1', { action: 'request_changes', comment: 'Bigger name' })
+    const p = await a.respondToProof('prf_1001_1', {
+      action: 'request_changes',
+      comment: 'Bigger name',
+    })
     expect(p.status).toBe('changes_requested')
     expect(p.revisionsUsed).toBe(1)
-    await expect(a.respondToProof('prf_1001_1', { action: 'approve' })).rejects.toThrow(/already answered/)
+    await expect(a.respondToProof('prf_1001_1', { action: 'approve' })).rejects.toThrow(
+      /already answered/,
+    )
   })
   it('prices a quote from the volume tier', async () => {
-    const q = await mock().requestQuote({ company: 'Acme', contactName: 'A', email: 'a@b.co', quantity: 30, vehicles: 'F-150', deadline: '2027-01-01' })
+    const q = await mock().requestQuote({
+      company: 'Acme',
+      contactName: 'A',
+      email: 'a@b.co',
+      quantity: 30,
+      vehicles: 'F-150',
+      deadline: '2027-01-01',
+    })
     expect(q.tierId).toBe('tier_3')
     expect(q.unitPrice.amount).toBe('127.20')
     expect(q.total.amount).toBe((127.2 * 30 + 49).toFixed(2))
@@ -108,6 +128,8 @@ describe('shopify adapter stub', () => {
     expect(keys(createShopifyAdapter())).toEqual(keys(mock()))
   })
   it('throws NOT_IMPLEMENTED until Phase 2', async () => {
-    await expect(createShopifyAdapter().getProducts()).rejects.toMatchObject({ code: 'NOT_IMPLEMENTED' })
+    await expect(createShopifyAdapter().getProducts()).rejects.toMatchObject({
+      code: 'NOT_IMPLEMENTED',
+    })
   })
 })

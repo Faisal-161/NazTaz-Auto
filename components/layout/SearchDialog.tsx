@@ -16,26 +16,35 @@ export function SearchDialog() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent title={t.title} closeLabel={t.close} className="top-24 translate-y-0 sm:top-28">
+      <DialogContent
+        title={t.title}
+        closeLabel={t.close}
+        className="top-24 translate-y-0 sm:top-28"
+      >
         <form role="search" onSubmit={(e) => e.preventDefault()}>
           <label htmlFor="site-search" className="sr-only">
             {t.label}
           </label>
           <div className="relative">
-            <Search aria-hidden className="pointer-events-none absolute top-1/2 left-3.5 size-5 -translate-y-1/2 text-subtle" />
+            <Search
+              aria-hidden
+              className="pointer-events-none absolute top-1/2 left-3.5 size-5 -translate-y-1/2 text-subtle"
+            />
             <input
               id="site-search"
               type="search"
               autoComplete="off"
               placeholder={t.placeholder}
-              className="h-12 w-full rounded-lg border border-line bg-bg pr-4 pl-11 text-base placeholder:text-subtle focus-visible:border-accent focus-visible:shadow-glow-sm focus-visible:outline-none"
+              className="h-12 w-full rounded-lg border border-line-strong bg-bg pr-4 pl-11 text-base placeholder:text-subtle focus-visible:border-accent focus-visible:shadow-glow-sm focus-visible:outline-none"
             />
           </div>
         </form>
         <div className="mt-5">
           <p className="text-sm font-medium">{t.empty.title}</p>
           <p className="text-sm text-muted">{t.empty.body}</p>
-          <p className="mt-5 text-xs font-medium tracking-wide text-subtle uppercase">{t.shortcutsTitle}</p>
+          <p className="mt-5 text-xs font-medium tracking-wide text-subtle uppercase">
+            {t.shortcutsTitle}
+          </p>
           <ul className="mt-2 flex flex-wrap gap-2">
             {t.shortcuts.map((s) => (
               <li key={s.href}>

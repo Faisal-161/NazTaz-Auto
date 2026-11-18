@@ -3,7 +3,11 @@ export type NavLink = { label: string; href: string; description?: string }
 
 export const primaryNav: NavLink[] = [
   { label: 'Shop', href: '/shop', description: 'Lights for your vehicle and universal lights' },
-  { label: 'Design studio', href: '/studio', description: 'Preview your design glowing on the ground' },
+  {
+    label: 'Design studio',
+    href: '/studio',
+    description: 'Preview your design glowing on the ground',
+  },
   { label: 'Designs', href: '/designs', description: 'Ready-made designs to start from' },
   { label: 'Gifts', href: '/gifts', description: 'Buy now, they design later' },
   { label: 'Business', href: '/business', description: 'Logos for teams, dealers and fleets' },

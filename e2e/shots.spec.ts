@@ -18,16 +18,21 @@ for (const route of routes) {
       page.on('pageerror', (e) => problems.push(`pageerror: ${e.message}`))
       page.on('console', (m) => {
         // Network failures are reported (with URLs) by the response handler below.
-        if (m.type() === 'error' && !m.text().startsWith('Failed to load resource')) problems.push(`console: ${m.text()}`)
+        if (m.type() === 'error' && !m.text().startsWith('Failed to load resource'))
+          problems.push(`console: ${m.text()}`)
       })
       page.on('response', (r) => {
         if (r.status() < 400) return
-        const isExpected404 = route.name === 'not-found' && r.status() === 404 && r.url() === expectedDoc
+        const isExpected404 =
+          route.name === 'not-found' && r.status() === 404 && r.url() === expectedDoc
         if (!isExpected404) problems.push(`HTTP ${r.status()} ${r.url()}`)
       })
       await page.setViewportSize(vp)
       await page.goto(route.path, { waitUntil: 'networkidle' })
-      await page.screenshot({ path: `.artifacts/screenshots/${route.name}-${vp.width}.png`, fullPage: true })
+      await page.screenshot({
+        path: `.artifacts/screenshots/${route.name}-${vp.width}.png`,
+        fullPage: true,
+      })
       if (problems.length) throw new Error(`Problems on ${route.path}:\n${problems.join('\n')}`)
     })
   }

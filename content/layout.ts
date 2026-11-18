@@ -47,6 +47,8 @@ export const cartDrawer = {
   increase: (title: string) => `Increase quantity of ${title}`,
   remove: (title: string) => `Remove ${title}`,
   removed: (title: string) => `${title} removed from cart`,
+  undo: 'Undo',
+  undoAlt: (title: string) => `Undo removing ${title}`,
   subtotal: 'Subtotal',
   shippingNote: 'Shipping and taxes calculated at checkout.',
   leadNote: 'Custom lights ship after you approve your proof.',
@@ -55,6 +57,7 @@ export const cartDrawer = {
 } as const
 
 export const footer = {
+  navLabel: 'Footer',
   newsletter: {
     title: 'Get launch offers and new designs',
     body: 'One or two emails a month. Unsubscribe anytime.',
@@ -75,11 +78,13 @@ export const states = {
   placeholder: 'Placeholder',
   dismissToast: 'Dismiss notification',
   retry: 'Try again',
+  errorRef: 'Ref',
   genericError: {
     title: 'Something went wrong',
     body: 'Please try again. If it keeps happening, contact us and we will sort it out.',
   },
   notFound: {
+    metaTitle: 'Page not found',
     title: 'This page took a wrong turn',
     body: 'The page you are looking for does not exist or has moved.',
     home: 'Go home',

@@ -48,7 +48,12 @@ describe('garage store', () => {
     const a = g.addVehicle({ year: 2022, make: 'Ford', model: 'F-150' })
     const b = g.addVehicle({ year: 2023, make: 'Tesla', model: 'Model Y' })
     expect(useGarageStore.getState().activeId).toBe(b)
-    const again = g.addVehicle({ year: 2022, make: 'ford', model: 'f-150', housing_code: 'FD-DR-01' })
+    const again = g.addVehicle({
+      year: 2022,
+      make: 'ford',
+      model: 'f-150',
+      housing_code: 'FD-DR-01',
+    })
     expect(again).toBe(a)
     expect(useGarageStore.getState().vehicles).toHaveLength(2)
     expect(selectActiveVehicle(useGarageStore.getState())?.housing_code).toBe('FD-DR-01')
@@ -59,5 +64,19 @@ describe('garage store', () => {
     const b = g.addVehicle({ year: 2023, make: 'Tesla', model: 'Model Y' })
     g.removeVehicle(b)
     expect(useGarageStore.getState().activeId).toBe(a)
+  })
+})
+
+describe('persisted data is treated as untrusted', () => {
+  it('drops malformed cart lines', async () => {
+    const { sanitizeLines } = await import('@/lib/stores/cart')
+    const good = { ...line(), id: 'ok' }
+    expect(sanitizeLines([good, { id: 'bad' }, null, { ...good, quantity: -1 }])).toEqual([good])
+    expect(sanitizeLines('garbage')).toEqual([])
+  })
+  it('rejects malformed garage vehicles', async () => {
+    const { isGarageVehicle } = await import('@/lib/stores/garage')
+    expect(isGarageVehicle({ id: 'a', year: 2022, make: 'Ford', model: 'F-150' })).toBe(true)
+    expect(isGarageVehicle({ id: 'a', year: '2022' })).toBe(false)
   })
 })
