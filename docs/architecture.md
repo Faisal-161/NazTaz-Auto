@@ -15,7 +15,7 @@
 | Forms            | react-hook-form + zod                                                             |
 | Tests            | Vitest + Testing Library (jsdom); Playwright e2e + axe                            |
 | Tooling          | pnpm, ESLint (flat config, next core-web-vitals), Prettier + tailwind plugin      |
-| Hosting (later)  | Vercel                                                                            |
+| Hosting          | Netlify now (OpenNext adapter, `netlify.toml`); Vercel optional later             |
 | Commerce (later) | Shopify Storefront API, Cart API, hosted checkout, Customer Account API           |
 
 ## Folder layout
