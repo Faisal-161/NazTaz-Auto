@@ -1,0 +1,18 @@
+# Netlify hosting (frontend on mock data). Next.js is auto-detected and deployed with Netlify's
+# OpenNext adapter (@netlify/plugin-nextjs, auto-installed: don't pin it). Docs:
+# https://docs.netlify.com/build/frameworks/framework-setup-guides/nextjs/overview/
+
+[build]
+  command = "pnpm build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  COMMERCE_PROVIDER = "mock"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Long-cache our static placeholder art (Next already immutably caches /_next/static).
+[[headers]]
+  for = "/placeholders/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

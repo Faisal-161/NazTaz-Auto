@@ -7,10 +7,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
-    // Our own placeholder SVGs only. Sandboxed so an SVG can never run script.
-    dangerouslyAllowSVG: true,
-    contentDispositionType: 'attachment',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // .svg sources (our placeholders) are served as-is: Next never optimizes SVG.
     // Phase 2: add { protocol: 'https', hostname: 'cdn.shopify.com' }
     remotePatterns: [],
   },

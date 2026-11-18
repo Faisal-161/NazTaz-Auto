@@ -17,6 +17,8 @@ Tick a box only after `pnpm ci` is green and `perf-a11y-reviewer` returns PASS.
 - [x] `.claude/agents/perf-a11y-reviewer.md` + `.claude/skills/new-feature/SKILL.md`
 - [x] Screenshot script (390 / 1440)
 
+- [ ] Netlify deploy from GitHub (netlify.toml ready; needs repo + Netlify account)
+
 ## Phase 1B: Core
 
 - [ ] Fitment logic (`lib/fitment`) + tests
@@ -66,7 +68,7 @@ Tick a box only after `pnpm ci` is green and `perf-a11y-reviewer` returns PASS.
 - [ ] Customer Account API
 - [ ] Upload storage (designs, photos)
 - [ ] Small app / serverless for proofs, stages, quotes
-- [ ] Deploy to Vercel; switch `COMMERCE_PROVIDER=shopify`
+- [ ] Production deploy (Netlify; Vercel optional); switch `COMMERCE_PROVIDER=shopify`
 
 ## Phase 3: SEO + growth (later)
 

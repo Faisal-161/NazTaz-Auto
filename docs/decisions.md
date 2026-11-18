@@ -20,6 +20,18 @@ Newest first. Format: date, decision, why.
   `pnpm shots` (Playwright library), and APIs were checked against the bundled Next docs and installed
   type definitions.
 
+## 2026-11-18: Hosting on Netlify (for now)
+
+- Frontend is hosted on **Netlify** while we run on mock data; Shopify backend comes later. Netlify’s
+  OpenNext adapter (`@netlify/plugin-nextjs`, auto-installed, currently v5.16.x) lists App Router,
+  RSC, ISR/tags, image CDN and **Cache Components** as fully supported. `partialPrefetching` isn’t
+  listed: verify on the first deploy.
+- Deploy = Netlify builds from the GitHub repo (Linux). A local `netlify build` on Windows fails with
+  EPERM on symlinks (needs Developer Mode); that is a local OS limit, not a project issue.
+- Removed `images.dangerouslyAllowSVG`: Next serves `.svg` sources unoptimized automatically, so
+  SVGs never go through Netlify Image CDN.
+- Vercel remains an option later; nothing in the code is host-specific.
+
 ## Open questions (waiting on founder)
 
 See the bottom of the first session summary. Answers are recorded here as they arrive.

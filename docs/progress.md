@@ -110,6 +110,10 @@ SampleBadge, PlaceholderMedia (next/image + visible "Placeholder" tag + aspect r
 - Also fixed: return focus on store-opened Sheet/Dialog (`components/ui/useReturnFocus.ts`), placeholder route shells (`content/placeholders.ts` + `components/sections/RoutePlaceholder.tsx`, 19 routes), safe-area padding, `preload` (Next 16) in place of `priority`, Logo `useId`, persisted-store sanitizers.
 - Axe smoke: 3/3. Captures + keyboard: 11/11 (`PW_CHANNEL=chrome pnpm shots`). Unit: 51/51. Home 145.5 KB gz.
 
+### Hosting
+
+- `netlify.toml`: `pnpm build`, publish `.next`, Node 22, `COMMERCE_PROVIDER=mock`, cache header for /placeholders. Adapter auto-installed. Local Netlify build compiled fine (adapter v5.16.8) and then hit a Windows symlink EPERM; deploy from GitHub instead.
+
 ### Known gaps / TODO carried forward
 
 - `e2e/layout.spec.ts` tolerates /products/* 404s (NOT_BUILT_YET). Remove that in 1B.
