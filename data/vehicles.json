@@ -1,0 +1,242 @@
+[
+  {
+    "id": "ford-f-150",
+    "make": "Ford",
+    "makeSlug": "ford",
+    "model": "F-150",
+    "modelSlug": "f-150",
+    "segment": "truck",
+    "image": {
+      "url": "/placeholders/vehicle-truck.svg",
+      "altText": "Ford F-150 silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "ram-1500",
+    "make": "RAM",
+    "makeSlug": "ram",
+    "model": "1500",
+    "modelSlug": "1500",
+    "segment": "truck",
+    "image": {
+      "url": "/placeholders/vehicle-truck.svg",
+      "altText": "RAM 1500 silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "chevrolet-silverado-1500",
+    "make": "Chevrolet",
+    "makeSlug": "chevrolet",
+    "model": "Silverado 1500",
+    "modelSlug": "silverado-1500",
+    "segment": "truck",
+    "image": {
+      "url": "/placeholders/vehicle-truck.svg",
+      "altText": "Chevrolet Silverado 1500 silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "tesla-model-3",
+    "make": "Tesla",
+    "makeSlug": "tesla",
+    "model": "Model 3",
+    "modelSlug": "model-3",
+    "segment": "ev",
+    "image": {
+      "url": "/placeholders/vehicle-ev.svg",
+      "altText": "Tesla Model 3 silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "tesla-model-y",
+    "make": "Tesla",
+    "makeSlug": "tesla",
+    "model": "Model Y",
+    "modelSlug": "model-y",
+    "segment": "ev",
+    "image": {
+      "url": "/placeholders/vehicle-ev.svg",
+      "altText": "Tesla Model Y silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "dodge-challenger",
+    "make": "Dodge",
+    "makeSlug": "dodge",
+    "model": "Challenger",
+    "modelSlug": "challenger",
+    "segment": "car",
+    "image": {
+      "url": "/placeholders/vehicle-car.svg",
+      "altText": "Dodge Challenger silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "dodge-charger",
+    "make": "Dodge",
+    "makeSlug": "dodge",
+    "model": "Charger",
+    "modelSlug": "charger",
+    "segment": "car",
+    "image": {
+      "url": "/placeholders/vehicle-car.svg",
+      "altText": "Dodge Charger silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "toyota-camry",
+    "make": "Toyota",
+    "makeSlug": "toyota",
+    "model": "Camry",
+    "modelSlug": "camry",
+    "segment": "car",
+    "image": {
+      "url": "/placeholders/vehicle-car.svg",
+      "altText": "Toyota Camry silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "honda-accord",
+    "make": "Honda",
+    "makeSlug": "honda",
+    "model": "Accord",
+    "modelSlug": "accord",
+    "segment": "car",
+    "image": {
+      "url": "/placeholders/vehicle-car.svg",
+      "altText": "Honda Accord silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "chevrolet-tahoe",
+    "make": "Chevrolet",
+    "makeSlug": "chevrolet",
+    "model": "Tahoe",
+    "modelSlug": "tahoe",
+    "segment": "suv",
+    "image": {
+      "url": "/placeholders/vehicle-suv.svg",
+      "altText": "Chevrolet Tahoe silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "gmc-yukon",
+    "make": "GMC",
+    "makeSlug": "gmc",
+    "model": "Yukon",
+    "modelSlug": "yukon",
+    "segment": "suv",
+    "image": {
+      "url": "/placeholders/vehicle-suv.svg",
+      "altText": "GMC Yukon silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "cadillac-escalade",
+    "make": "Cadillac",
+    "makeSlug": "cadillac",
+    "model": "Escalade",
+    "modelSlug": "escalade",
+    "segment": "suv",
+    "image": {
+      "url": "/placeholders/vehicle-suv.svg",
+      "altText": "Cadillac Escalade silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "jeep-grand-cherokee",
+    "make": "Jeep",
+    "makeSlug": "jeep",
+    "model": "Grand Cherokee",
+    "modelSlug": "grand-cherokee",
+    "segment": "suv",
+    "image": {
+      "url": "/placeholders/vehicle-suv.svg",
+      "altText": "Jeep Grand Cherokee silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "ford-mustang",
+    "make": "Ford",
+    "makeSlug": "ford",
+    "model": "Mustang",
+    "modelSlug": "mustang",
+    "segment": "car",
+    "image": {
+      "url": "/placeholders/vehicle-car.svg",
+      "altText": "Ford Mustang silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "bmw-5-series",
+    "make": "BMW",
+    "makeSlug": "bmw",
+    "model": "5 Series",
+    "modelSlug": "5-series",
+    "segment": "car",
+    "image": {
+      "url": "/placeholders/vehicle-car.svg",
+      "altText": "BMW 5 Series silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  },
+  {
+    "id": "mercedes-benz-c-class",
+    "make": "Mercedes-Benz",
+    "makeSlug": "mercedes-benz",
+    "model": "C-Class",
+    "modelSlug": "c-class",
+    "segment": "car",
+    "image": {
+      "url": "/placeholders/vehicle-car.svg",
+      "altText": "Mercedes-Benz C-Class silhouette (placeholder)",
+      "width": 800,
+      "height": 450,
+      "placeholder": true
+    }
+  }
+]

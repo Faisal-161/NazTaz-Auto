@@ -1,0 +1,58 @@
+[
+  {
+    "id": "prf_1001_1",
+    "orderId": "ord_1001",
+    "version": 1,
+    "status": "pending",
+    "lensArtUrl": "/placeholders/design-names.svg",
+    "projectionUrl": "/placeholders/product-night.svg",
+    "revisionsUsed": 0,
+    "revisionsAllowed": 2,
+    "comments": [
+      {
+        "id": "c1",
+        "author": "studio",
+        "body": "Here is your first proof. Approve it or tell us what to change.",
+        "at": "2026-11-02T15:00:00Z"
+      }
+    ],
+    "createdAt": "2026-11-02T15:00:00Z"
+  },
+  {
+    "id": "prf_1002_1",
+    "orderId": "ord_1002",
+    "version": 2,
+    "status": "approved",
+    "lensArtUrl": "/placeholders/design-names.svg",
+    "projectionUrl": "/placeholders/product-night.svg",
+    "revisionsUsed": 1,
+    "revisionsAllowed": 2,
+    "comments": [
+      {
+        "id": "c1",
+        "author": "customer",
+        "body": "Can the date be a bit larger?",
+        "at": "2026-10-21T15:00:00Z"
+      },
+      {
+        "id": "c2",
+        "author": "studio",
+        "body": "Updated: date enlarged 20%.",
+        "at": "2026-10-22T15:00:00Z"
+      }
+    ],
+    "createdAt": "2026-11-02T15:00:00Z"
+  },
+  {
+    "id": "prf_1003_1",
+    "orderId": "ord_1003",
+    "version": 1,
+    "status": "approved",
+    "lensArtUrl": "/placeholders/design-names.svg",
+    "projectionUrl": "/placeholders/product-night.svg",
+    "revisionsUsed": 0,
+    "revisionsAllowed": 2,
+    "comments": [],
+    "createdAt": "2026-11-02T15:00:00Z"
+  }
+]

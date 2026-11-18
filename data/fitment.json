@@ -1,0 +1,360 @@
+[
+  {
+    "id": "ford-f-150-1",
+    "make": "Ford",
+    "model": "F-150",
+    "generation": "14th gen",
+    "year_start": 2021,
+    "year_end": 2025,
+    "trims": [
+      "XLT",
+      "Lariat",
+      "King Ranch",
+      "Platinum",
+      "Limited"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "FD-DR-01",
+      "FD-MR-01"
+    ],
+    "confidence": "verified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "ford-f-150-2",
+    "make": "Ford",
+    "model": "F-150",
+    "generation": "13th gen",
+    "year_start": 2015,
+    "year_end": 2020,
+    "trims": [
+      "Lariat",
+      "King Ranch",
+      "Platinum",
+      "Limited"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "FD-MR-01"
+    ],
+    "confidence": "likely",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "ram-1500-1",
+    "make": "RAM",
+    "model": "1500",
+    "generation": "5th gen (DT)",
+    "year_start": 2019,
+    "year_end": 2025,
+    "trims": [
+      "Laramie",
+      "Limited",
+      "Longhorn"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "RM-MR-01"
+    ],
+    "confidence": "verified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "chevrolet-silverado-1500-1",
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "generation": "4th gen",
+    "year_start": 2019,
+    "year_end": 2021,
+    "trims": [
+      "LTZ",
+      "High Country"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "GM-MR-01"
+    ],
+    "confidence": "verified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "chevrolet-silverado-1500-2",
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "generation": "4th gen",
+    "year_start": 2022,
+    "year_end": 2025,
+    "trims": [
+      "LTZ",
+      "High Country"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "GM-MR-02"
+    ],
+    "confidence": "likely",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "tesla-model-3-1",
+    "make": "Tesla",
+    "model": "Model 3",
+    "generation": "Highland",
+    "year_start": 2024,
+    "year_end": 2025,
+    "trims": [],
+    "has_factory_lights": "yes",
+    "housings": [
+      "TS-DR-01"
+    ],
+    "confidence": "verified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "tesla-model-3-2",
+    "make": "Tesla",
+    "model": "Model 3",
+    "generation": "1st gen",
+    "year_start": 2017,
+    "year_end": 2023,
+    "trims": [],
+    "has_factory_lights": "yes",
+    "housings": [
+      "TS-DR-01"
+    ],
+    "confidence": "verified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "tesla-model-y-1",
+    "make": "Tesla",
+    "model": "Model Y",
+    "generation": "1st gen",
+    "year_start": 2020,
+    "year_end": 2025,
+    "trims": [],
+    "has_factory_lights": "yes",
+    "housings": [
+      "TS-DR-01"
+    ],
+    "confidence": "verified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "dodge-challenger-1",
+    "make": "Dodge",
+    "model": "Challenger",
+    "generation": "3rd gen",
+    "year_start": 2015,
+    "year_end": 2023,
+    "trims": [
+      "SXT",
+      "R/T",
+      "Scat Pack"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "ST-DR-01"
+    ],
+    "confidence": "likely",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "dodge-charger-1",
+    "make": "Dodge",
+    "model": "Charger",
+    "generation": "7th gen",
+    "year_start": 2015,
+    "year_end": 2023,
+    "trims": [
+      "GT",
+      "R/T",
+      "Scat Pack"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "ST-DR-01"
+    ],
+    "confidence": "likely",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "toyota-camry-1",
+    "make": "Toyota",
+    "model": "Camry",
+    "generation": "8th gen",
+    "year_start": 2018,
+    "year_end": 2024,
+    "trims": [
+      "XLE",
+      "XSE"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "TY-DR-01"
+    ],
+    "confidence": "unverified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "honda-accord-1",
+    "make": "Honda",
+    "model": "Accord",
+    "generation": "10th gen",
+    "year_start": 2018,
+    "year_end": 2022,
+    "trims": [
+      "Touring"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "HN-DR-01"
+    ],
+    "confidence": "unverified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "honda-accord-2",
+    "make": "Honda",
+    "model": "Accord",
+    "generation": "11th gen",
+    "year_start": 2023,
+    "year_end": 2025,
+    "trims": [],
+    "has_factory_lights": "no",
+    "housings": [],
+    "confidence": "unverified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "chevrolet-tahoe-1",
+    "make": "Chevrolet",
+    "model": "Tahoe",
+    "generation": "5th gen",
+    "year_start": 2021,
+    "year_end": 2025,
+    "trims": [],
+    "has_factory_lights": "yes",
+    "housings": [
+      "GM-DR-01"
+    ],
+    "confidence": "verified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "gmc-yukon-1",
+    "make": "GMC",
+    "model": "Yukon",
+    "generation": "5th gen",
+    "year_start": 2021,
+    "year_end": 2025,
+    "trims": [],
+    "has_factory_lights": "yes",
+    "housings": [
+      "GM-DR-01"
+    ],
+    "confidence": "verified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "cadillac-escalade-1",
+    "make": "Cadillac",
+    "model": "Escalade",
+    "generation": "5th gen",
+    "year_start": 2021,
+    "year_end": 2025,
+    "trims": [],
+    "has_factory_lights": "yes",
+    "housings": [
+      "GM-DR-01"
+    ],
+    "confidence": "likely",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "jeep-grand-cherokee-1",
+    "make": "Jeep",
+    "model": "Grand Cherokee",
+    "generation": "WL",
+    "year_start": 2022,
+    "year_end": 2025,
+    "trims": [
+      "Overland",
+      "Summit"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "ST-DR-01"
+    ],
+    "confidence": "likely",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "ford-mustang-1",
+    "make": "Ford",
+    "model": "Mustang",
+    "generation": "6th gen (S550)",
+    "year_start": 2015,
+    "year_end": 2023,
+    "trims": [
+      "GT Premium"
+    ],
+    "has_factory_lights": "some",
+    "housings": [
+      "FD-DR-02"
+    ],
+    "confidence": "likely",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "bmw-5-series-1",
+    "make": "BMW",
+    "model": "5 Series",
+    "generation": "G30",
+    "year_start": 2017,
+    "year_end": 2023,
+    "trims": [],
+    "has_factory_lights": "yes",
+    "housings": [
+      "BM-DR-01"
+    ],
+    "confidence": "unverified",
+    "verified_installs": 0,
+    "source": "sample"
+  },
+  {
+    "id": "mercedes-benz-c-class-1",
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "generation": "W206",
+    "year_start": 2022,
+    "year_end": 2025,
+    "trims": [],
+    "has_factory_lights": "yes",
+    "housings": [
+      "MB-DR-01"
+    ],
+    "confidence": "unverified",
+    "verified_installs": 0,
+    "source": "sample"
+  }
+]

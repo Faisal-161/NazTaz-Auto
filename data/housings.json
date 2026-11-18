@@ -1,0 +1,341 @@
+[
+  {
+    "code": "FD-DR-01",
+    "name": "Ford truck door, oval",
+    "location": "door",
+    "shape": "oval",
+    "connector": "2-pin Ford sealed",
+    "oem_part_numbers": [
+      "SAMPLE-FD-1001"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-oval.svg",
+      "altText": "Ford truck door, oval housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin Ford sealed connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/fd-dr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "FD-MR-01",
+    "name": "Ford truck mirror, rectangle",
+    "location": "mirror",
+    "shape": "rectangle",
+    "connector": "2-pin Ford mirror harness",
+    "oem_part_numbers": [
+      "SAMPLE-FD-1002"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-rect.svg",
+      "altText": "Ford truck mirror, rectangle housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin Ford mirror harness connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/fd-mr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "FD-DR-02",
+    "name": "Ford coupe door, round",
+    "location": "door",
+    "shape": "round",
+    "connector": "2-pin Ford compact",
+    "oem_part_numbers": [
+      "SAMPLE-FD-1003"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-round.svg",
+      "altText": "Ford coupe door, round housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin Ford compact connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/fd-dr-02",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "RM-MR-01",
+    "name": "RAM mirror, rectangle",
+    "location": "mirror",
+    "shape": "rectangle",
+    "connector": "2-pin Stellantis mirror",
+    "oem_part_numbers": [
+      "SAMPLE-RM-2001"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-rect.svg",
+      "altText": "RAM mirror, rectangle housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin Stellantis mirror connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/rm-mr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "ST-DR-01",
+    "name": "Stellantis door, oval",
+    "location": "door",
+    "shape": "oval",
+    "connector": "2-pin Stellantis door",
+    "oem_part_numbers": [
+      "SAMPLE-ST-2101",
+      "SAMPLE-ST-2102"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-oval.svg",
+      "altText": "Stellantis door, oval housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin Stellantis door connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/st-dr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "GM-MR-01",
+    "name": "GM mirror, early rectangle",
+    "location": "mirror",
+    "shape": "rectangle",
+    "connector": "2-pin GM mirror (early)",
+    "oem_part_numbers": [
+      "SAMPLE-GM-3001"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-rect.svg",
+      "altText": "GM mirror, early rectangle housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin GM mirror (early) connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/gm-mr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "GM-MR-02",
+    "name": "GM mirror, late slim",
+    "location": "mirror",
+    "shape": "slim rectangle",
+    "connector": "2-pin GM mirror (late)",
+    "oem_part_numbers": [
+      "SAMPLE-GM-3002"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-rect.svg",
+      "altText": "GM mirror, late slim housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin GM mirror (late) connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/gm-mr-02",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "GM-DR-01",
+    "name": "GM SUV door, oval",
+    "location": "door",
+    "shape": "oval",
+    "connector": "2-pin GM door",
+    "oem_part_numbers": [
+      "SAMPLE-GM-3101"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-oval.svg",
+      "altText": "GM SUV door, oval housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin GM door connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/gm-dr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "TS-DR-01",
+    "name": "EV sedan/crossover door, rectangle",
+    "location": "door",
+    "shape": "rectangle",
+    "connector": "2-pin EV door",
+    "oem_part_numbers": [
+      "SAMPLE-TS-4001"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-rect.svg",
+      "altText": "EV sedan/crossover door, rectangle housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin EV door connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/ts-dr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "TY-DR-01",
+    "name": "Toyota sedan door, rectangle",
+    "location": "door",
+    "shape": "rectangle",
+    "connector": "2-pin Toyota",
+    "oem_part_numbers": [
+      "SAMPLE-TY-5001"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-rect.svg",
+      "altText": "Toyota sedan door, rectangle housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin Toyota connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/ty-dr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "HN-DR-01",
+    "name": "Honda sedan door, rectangle",
+    "location": "door",
+    "shape": "rectangle",
+    "connector": "2-pin Honda",
+    "oem_part_numbers": [
+      "SAMPLE-HN-6001"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-rect.svg",
+      "altText": "Honda sedan door, rectangle housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin Honda connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/hn-dr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "BM-DR-01",
+    "name": "German luxury door, rectangle A",
+    "location": "door",
+    "shape": "rectangle",
+    "connector": "2-pin Euro A",
+    "oem_part_numbers": [
+      "SAMPLE-BM-7001"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-rect.svg",
+      "altText": "German luxury door, rectangle A housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin Euro A connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/bm-dr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  },
+  {
+    "code": "MB-DR-01",
+    "name": "German luxury door, rectangle B",
+    "location": "door",
+    "shape": "rectangle",
+    "connector": "2-pin Euro B",
+    "oem_part_numbers": [
+      "SAMPLE-MB-8001"
+    ],
+    "photo_housing": {
+      "url": "/placeholders/housing-rect.svg",
+      "altText": "German luxury door, rectangle B housing (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "photo_connector": {
+      "url": "/placeholders/connector.svg",
+      "altText": "2-pin Euro B connector (placeholder)",
+      "width": 800,
+      "height": 600,
+      "placeholder": true
+    },
+    "install_guide": "/install/mb-dr-01",
+    "notes": "Illustrative sample data. Verify against a real part before launch."
+  }
+]

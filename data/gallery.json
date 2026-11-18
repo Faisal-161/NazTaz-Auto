@@ -1,0 +1,122 @@
+[
+  {
+    "id": "gal_1",
+    "image": {
+      "url": "/placeholders/gallery-night.svg",
+      "altText": "Ford F-150 puddle light at night (placeholder)",
+      "width": 800,
+      "height": 1000,
+      "placeholder": true
+    },
+    "vehicle": "Ford F-150",
+    "make": "Ford",
+    "design_category": "names",
+    "caption": "Ford F-150, names design",
+    "sample": true
+  },
+  {
+    "id": "gal_2",
+    "image": {
+      "url": "/placeholders/gallery-night.svg",
+      "altText": "Tesla Model Y puddle light at night (placeholder)",
+      "width": 800,
+      "height": 1000,
+      "placeholder": true
+    },
+    "vehicle": "Tesla Model Y",
+    "make": "Tesla",
+    "design_category": "wedding",
+    "caption": "Tesla Model Y, wedding design",
+    "sample": true
+  },
+  {
+    "id": "gal_3",
+    "image": {
+      "url": "/placeholders/gallery-night.svg",
+      "altText": "RAM 1500 puddle light at night (placeholder)",
+      "width": 800,
+      "height": 1000,
+      "placeholder": true
+    },
+    "vehicle": "RAM 1500",
+    "make": "RAM",
+    "design_category": "business",
+    "caption": "RAM 1500, business design",
+    "sample": true
+  },
+  {
+    "id": "gal_4",
+    "image": {
+      "url": "/placeholders/gallery-night.svg",
+      "altText": "Dodge Challenger puddle light at night (placeholder)",
+      "width": 800,
+      "height": 1000,
+      "placeholder": true
+    },
+    "vehicle": "Dodge Challenger",
+    "make": "Dodge",
+    "design_category": "enthusiast",
+    "caption": "Dodge Challenger, enthusiast design",
+    "sample": true
+  },
+  {
+    "id": "gal_5",
+    "image": {
+      "url": "/placeholders/gallery-night.svg",
+      "altText": "Chevrolet Tahoe puddle light at night (placeholder)",
+      "width": 800,
+      "height": 1000,
+      "placeholder": true
+    },
+    "vehicle": "Chevrolet Tahoe",
+    "make": "Chevrolet",
+    "design_category": "initials",
+    "caption": "Chevrolet Tahoe, initials design",
+    "sample": true
+  },
+  {
+    "id": "gal_6",
+    "image": {
+      "url": "/placeholders/gallery-night.svg",
+      "altText": "Tesla Model 3 puddle light at night (placeholder)",
+      "width": 800,
+      "height": 1000,
+      "placeholder": true
+    },
+    "vehicle": "Tesla Model 3",
+    "make": "Tesla",
+    "design_category": "pattern",
+    "caption": "Tesla Model 3, pattern design",
+    "sample": true
+  },
+  {
+    "id": "gal_7",
+    "image": {
+      "url": "/placeholders/gallery-night.svg",
+      "altText": "Jeep Grand Cherokee puddle light at night (placeholder)",
+      "width": 800,
+      "height": 1000,
+      "placeholder": true
+    },
+    "vehicle": "Jeep Grand Cherokee",
+    "make": "Jeep",
+    "design_category": "enthusiast",
+    "caption": "Jeep Grand Cherokee, enthusiast design",
+    "sample": true
+  },
+  {
+    "id": "gal_8",
+    "image": {
+      "url": "/placeholders/gallery-night.svg",
+      "altText": "Toyota Camry puddle light at night (placeholder)",
+      "width": 800,
+      "height": 1000,
+      "placeholder": true
+    },
+    "vehicle": "Toyota Camry",
+    "make": "Toyota",
+    "design_category": "names",
+    "caption": "Toyota Camry, names design",
+    "sample": true
+  }
+]

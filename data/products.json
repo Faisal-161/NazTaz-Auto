@@ -1,0 +1,2324 @@
+[
+  {
+    "id": "gid://mock/Product/1",
+    "handle": "fd-dr-01-door-puddle-lights",
+    "title": "Ford truck door, oval puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the Ford truck door, oval housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "Ford truck door, oval puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-oval.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/fd-dr-01-door-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "79.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/fd-dr-01-door-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "159.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/fd-dr-01-door-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "134.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/fd-dr-01-door-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "270.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "door",
+      "oval"
+    ],
+    "housing_code": "FD-DR-01",
+    "lens": "single",
+    "location": "door",
+    "lead_time_days": 3,
+    "in_the_box": [
+      "2 or 4 door puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": 1,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "79.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "270.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/2",
+    "handle": "fd-mr-01-mirror-puddle-lights",
+    "title": "Ford truck mirror, rectangle puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the Ford truck mirror, rectangle housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "Ford truck mirror, rectangle puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-rect.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/fd-mr-01-mirror-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "189.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/fd-mr-01-mirror-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "219.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/fd-mr-01-mirror-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "321.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/fd-mr-01-mirror-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "372.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "mirror",
+      "rectangle"
+    ],
+    "housing_code": "FD-MR-01",
+    "lens": "dual",
+    "location": "mirror",
+    "lead_time_days": 5,
+    "in_the_box": [
+      "2 or 4 mirror puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": null,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "189.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "372.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/3",
+    "handle": "fd-dr-02-door-puddle-lights",
+    "title": "Ford coupe door, round puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the Ford coupe door, round housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "Ford coupe door, round puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-round.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/fd-dr-02-door-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "79.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/fd-dr-02-door-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "159.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/fd-dr-02-door-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "134.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/fd-dr-02-door-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "270.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "door",
+      "round"
+    ],
+    "housing_code": "FD-DR-02",
+    "lens": "single",
+    "location": "door",
+    "lead_time_days": 3,
+    "in_the_box": [
+      "2 or 4 door puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": null,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "79.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "270.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/4",
+    "handle": "rm-mr-01-mirror-puddle-lights",
+    "title": "RAM mirror, rectangle puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the RAM mirror, rectangle housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "RAM mirror, rectangle puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-rect.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/rm-mr-01-mirror-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "189.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/rm-mr-01-mirror-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "219.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/rm-mr-01-mirror-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "321.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/rm-mr-01-mirror-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "372.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "mirror",
+      "rectangle"
+    ],
+    "housing_code": "RM-MR-01",
+    "lens": "dual",
+    "location": "mirror",
+    "lead_time_days": 5,
+    "in_the_box": [
+      "2 or 4 mirror puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": 3,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "189.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "372.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/5",
+    "handle": "st-dr-01-door-puddle-lights",
+    "title": "Stellantis door, oval puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the Stellantis door, oval housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "Stellantis door, oval puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-oval.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/st-dr-01-door-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "79.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/st-dr-01-door-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "159.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/st-dr-01-door-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "134.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/st-dr-01-door-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "270.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "door",
+      "oval"
+    ],
+    "housing_code": "ST-DR-01",
+    "lens": "single",
+    "location": "door",
+    "lead_time_days": 3,
+    "in_the_box": [
+      "2 or 4 door puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": 5,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "79.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "270.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/6",
+    "handle": "gm-mr-01-mirror-puddle-lights",
+    "title": "GM mirror, early rectangle puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the GM mirror, early rectangle housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "GM mirror, early rectangle puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-rect.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/gm-mr-01-mirror-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "189.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/gm-mr-01-mirror-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "219.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/gm-mr-01-mirror-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "321.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/gm-mr-01-mirror-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "372.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "mirror",
+      "rectangle"
+    ],
+    "housing_code": "GM-MR-01",
+    "lens": "dual",
+    "location": "mirror",
+    "lead_time_days": 5,
+    "in_the_box": [
+      "2 or 4 mirror puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": null,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "189.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "372.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/7",
+    "handle": "gm-mr-02-mirror-puddle-lights",
+    "title": "GM mirror, late slim puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the GM mirror, late slim housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "GM mirror, late slim puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-rect.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/gm-mr-02-mirror-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "189.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/gm-mr-02-mirror-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "219.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/gm-mr-02-mirror-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "321.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/gm-mr-02-mirror-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "372.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "mirror",
+      "slim rectangle"
+    ],
+    "housing_code": "GM-MR-02",
+    "lens": "dual",
+    "location": "mirror",
+    "lead_time_days": 5,
+    "in_the_box": [
+      "2 or 4 mirror puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": 4,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "189.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "372.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/8",
+    "handle": "gm-dr-01-door-puddle-lights",
+    "title": "GM SUV door, oval puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the GM SUV door, oval housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "GM SUV door, oval puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-oval.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/gm-dr-01-door-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "79.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/gm-dr-01-door-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "159.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/gm-dr-01-door-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "134.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/gm-dr-01-door-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "270.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "door",
+      "oval"
+    ],
+    "housing_code": "GM-DR-01",
+    "lens": "single",
+    "location": "door",
+    "lead_time_days": 3,
+    "in_the_box": [
+      "2 or 4 door puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": null,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "79.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "270.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/9",
+    "handle": "ts-dr-01-door-puddle-lights",
+    "title": "EV sedan/crossover door, rectangle puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the EV sedan/crossover door, rectangle housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "EV sedan/crossover door, rectangle puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-rect.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/ts-dr-01-door-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "79.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/ts-dr-01-door-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "159.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/ts-dr-01-door-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "134.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/ts-dr-01-door-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "270.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "door",
+      "rectangle"
+    ],
+    "housing_code": "TS-DR-01",
+    "lens": "single",
+    "location": "door",
+    "lead_time_days": 3,
+    "in_the_box": [
+      "2 or 4 door puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": 2,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "79.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "270.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/10",
+    "handle": "ty-dr-01-door-puddle-lights",
+    "title": "Toyota sedan door, rectangle puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the Toyota sedan door, rectangle housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "Toyota sedan door, rectangle puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-rect.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/ty-dr-01-door-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "79.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/ty-dr-01-door-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "159.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/ty-dr-01-door-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "134.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/ty-dr-01-door-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "270.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "door",
+      "rectangle"
+    ],
+    "housing_code": "TY-DR-01",
+    "lens": "single",
+    "location": "door",
+    "lead_time_days": 3,
+    "in_the_box": [
+      "2 or 4 door puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": null,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "79.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "270.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/11",
+    "handle": "hn-dr-01-door-puddle-lights",
+    "title": "Honda sedan door, rectangle puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the Honda sedan door, rectangle housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "Honda sedan door, rectangle puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-rect.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/hn-dr-01-door-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "79.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/hn-dr-01-door-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "159.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/hn-dr-01-door-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "134.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/hn-dr-01-door-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "270.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "door",
+      "rectangle"
+    ],
+    "housing_code": "HN-DR-01",
+    "lens": "single",
+    "location": "door",
+    "lead_time_days": 3,
+    "in_the_box": [
+      "2 or 4 door puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": null,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "79.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "270.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/12",
+    "handle": "bm-dr-01-door-puddle-lights",
+    "title": "German luxury door, rectangle A puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the German luxury door, rectangle A housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "German luxury door, rectangle A puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-rect.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/bm-dr-01-door-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "79.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/bm-dr-01-door-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "159.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/bm-dr-01-door-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "134.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/bm-dr-01-door-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "270.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "door",
+      "rectangle"
+    ],
+    "housing_code": "BM-DR-01",
+    "lens": "single",
+    "location": "door",
+    "lead_time_days": 3,
+    "in_the_box": [
+      "2 or 4 door puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": null,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "79.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "270.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/13",
+    "handle": "mb-dr-01-door-puddle-lights",
+    "title": "German luxury door, rectangle B puddle lights",
+    "productType": "vehicle",
+    "description": "Plug-in replacement puddle lights for the German luxury door, rectangle B housing. Glass-etched lens, so the design never fades.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "German luxury door, rectangle B puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/housing-rect.svg",
+        "altText": "Housing (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      },
+      {
+        "url": "/placeholders/connector.svg",
+        "altText": "Connector (placeholder)",
+        "width": 800,
+        "height": 600,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/mb-dr-01-door-puddle-lights-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "79.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/mb-dr-01-door-puddle-lights-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "159.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/mb-dr-01-door-puddle-lights-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "134.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/mb-dr-01-door-puddle-lights-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "270.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "door",
+      "rectangle"
+    ],
+    "housing_code": "MB-DR-01",
+    "lens": "single",
+    "location": "door",
+    "lead_time_days": 3,
+    "in_the_box": [
+      "2 or 4 door puddle lights",
+      "Glass-etched lens installed",
+      "Trim removal tool",
+      "Printed install card"
+    ],
+    "warranty_years": 2,
+    "best_seller_rank": null,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "79.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "270.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/14",
+    "handle": "universal-wireless-puddle-lights",
+    "title": "Universal wireless puddle lights",
+    "productType": "universal",
+    "description": "Battery-powered stick-on puddle lights for cars without factory lights, classics, bikes and boats. Motion-activated.",
+    "featuredImage": {
+      "url": "/placeholders/product-night.svg",
+      "altText": "Universal puddle light projecting on asphalt (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [
+      {
+        "url": "/placeholders/product-night.svg",
+        "altText": "Night projection (placeholder)",
+        "width": 1200,
+        "height": 900,
+        "placeholder": true
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/universal-2-pre-made",
+        "title": "2 lights / Pre-made",
+        "price": {
+          "amount": "39.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/universal-2-custom",
+        "title": "2 lights / Custom",
+        "price": {
+          "amount": "54.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "2"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/universal-4-pre-made",
+        "title": "4 lights / Pre-made",
+        "price": {
+          "amount": "66.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Pre-made"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/universal-4-custom",
+        "title": "4 lights / Custom",
+        "price": {
+          "amount": "92.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Lights",
+            "value": "4"
+          },
+          {
+            "name": "Design",
+            "value": "Custom"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "universal",
+      "wireless"
+    ],
+    "housing_code": null,
+    "lens": "single",
+    "location": "universal",
+    "lead_time_days": 2,
+    "in_the_box": [
+      "2 or 4 wireless lights",
+      "Glass-etched lens installed",
+      "Adhesive mounts",
+      "USB-C charging cable"
+    ],
+    "warranty_years": 1,
+    "best_seller_rank": 6,
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "39.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "92.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Lights",
+        "values": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "name": "Design",
+        "values": [
+          "Pre-made",
+          "Custom"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://mock/Product/15",
+    "handle": "design-service",
+    "title": "Design service add-on",
+    "productType": "service",
+    "description": "Our designer turns your sketch, photo or idea into lens-ready art, with up to 2 revisions.",
+    "featuredImage": {
+      "url": "/placeholders/design-service.svg",
+      "altText": "Designer sketch to lens art (placeholder)",
+      "width": 1200,
+      "height": 900,
+      "placeholder": true
+    },
+    "images": [],
+    "priceRange": {
+      "minVariantPrice": {
+        "amount": "29.00",
+        "currencyCode": "USD"
+      },
+      "maxVariantPrice": {
+        "amount": "49.00",
+        "currencyCode": "USD"
+      }
+    },
+    "options": [
+      {
+        "name": "Level",
+        "values": [
+          "Clean-up",
+          "From scratch"
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "gid://mock/ProductVariant/design-service-cleanup",
+        "title": "Clean-up",
+        "price": {
+          "amount": "29.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Level",
+            "value": "Clean-up"
+          }
+        ]
+      },
+      {
+        "id": "gid://mock/ProductVariant/design-service-scratch",
+        "title": "From scratch",
+        "price": {
+          "amount": "49.00",
+          "currencyCode": "USD"
+        },
+        "compareAtPrice": null,
+        "availableForSale": true,
+        "selectedOptions": [
+          {
+            "name": "Level",
+            "value": "From scratch"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "service"
+    ],
+    "housing_code": null,
+    "lens": "single",
+    "location": "universal",
+    "lead_time_days": 2,
+    "in_the_box": [
+      "Lens-ready vector art",
+      "Projection preview",
+      "Up to 2 revisions"
+    ],
+    "warranty_years": 1,
+    "best_seller_rank": null
+  }
+]

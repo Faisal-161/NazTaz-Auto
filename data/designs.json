@@ -1,0 +1,170 @@
+[
+  {
+    "id": "dsg_001",
+    "handle": "script-name",
+    "name": "Script name",
+    "category": "names",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-names.svg",
+    "tags": [
+      "names"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_002",
+    "handle": "block-name",
+    "name": "Block name",
+    "category": "names",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-names.svg",
+    "tags": [
+      "names"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_003",
+    "handle": "monogram-circle",
+    "name": "Monogram circle",
+    "category": "initials",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-initials.svg",
+    "tags": [
+      "initials"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_004",
+    "handle": "twin-initials",
+    "name": "Twin initials",
+    "category": "initials",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-initials.svg",
+    "tags": [
+      "initials"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_005",
+    "handle": "just-married-rings",
+    "name": "Just married rings",
+    "category": "wedding",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-wedding.svg",
+    "tags": [
+      "wedding"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_006",
+    "handle": "est-date-banner",
+    "name": "Est. date banner",
+    "category": "wedding",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-wedding.svg",
+    "tags": [
+      "wedding"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_007",
+    "handle": "your-logo-here",
+    "name": "Your logo here",
+    "category": "business",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-business.svg",
+    "tags": [
+      "business"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_008",
+    "handle": "open-house-arrow",
+    "name": "Open house arrow",
+    "category": "business",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-business.svg",
+    "tags": [
+      "business"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_009",
+    "handle": "lightning-bolt",
+    "name": "Lightning bolt",
+    "category": "enthusiast",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-enthusiast.svg",
+    "tags": [
+      "enthusiast"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_010",
+    "handle": "tire-tread-ring",
+    "name": "Tire tread ring",
+    "category": "enthusiast",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-enthusiast.svg",
+    "tags": [
+      "enthusiast"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_011",
+    "handle": "mountain-ridge",
+    "name": "Mountain ridge",
+    "category": "enthusiast",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-enthusiast.svg",
+    "tags": [
+      "enthusiast"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_012",
+    "handle": "star-field",
+    "name": "Star field",
+    "category": "pattern",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-pattern.svg",
+    "tags": [
+      "pattern"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_013",
+    "handle": "compass-rose",
+    "name": "Compass rose",
+    "category": "pattern",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-pattern.svg",
+    "tags": [
+      "pattern"
+    ],
+    "sample": true
+  },
+  {
+    "id": "dsg_014",
+    "handle": "welcome-mat",
+    "name": "Welcome mat",
+    "category": "pattern",
+    "kind": "premade",
+    "artUrl": "/placeholders/design-pattern.svg",
+    "tags": [
+      "pattern"
+    ],
+    "sample": true
+  }
+]

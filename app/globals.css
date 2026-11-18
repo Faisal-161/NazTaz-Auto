@@ -1,26 +1,172 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Design tokens. Single source for colour, type, radius, glow, motion and layers.
+ * Components use the Tailwind utilities generated from these (bg-surface, text-muted,
+ * shadow-glow-md, duration-base, ease-light...). Never raw hex in components.
+ * Contrast targets (on --color-bg): fg ≥ 15:1, muted ≥ 7:1, subtle ≥ 4.5:1.
+ */
+@theme {
+  /* Colour: night neutrals + ONE glow accent (placeholder until brand is chosen) */
+  --color-bg: #07090d;
+  --color-surface: #0e1219;
+  --color-surface-2: #161c26;
+  --color-line: #263040;
+  --color-fg: #f2f5f8;
+  --color-muted: #b6bfcb;
+  --color-subtle: #8b96a5;
+  --color-accent: #7de3ff;
+  --color-accent-fg: #03131b;
+  --color-accent-soft: rgb(125 227 255 / 0.12);
+  --color-success: #5fe0a0;
+  --color-warning: #ffc861;
+  --color-danger: #ff7b7b;
+  --color-focus: #7de3ff;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Fit badges */
+  --color-fit-verified: var(--color-success);
+  --color-fit-likely: var(--color-accent);
+  --color-fit-check: var(--color-warning);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Type: display + readable sans (next/font variables set on <html>) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: clamp(1.2rem, 1.1rem + 0.4vw, 1.375rem);
+  --text-2xl: clamp(1.4rem, 1.2rem + 0.8vw, 1.75rem);
+  --text-3xl: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+  --text-4xl: clamp(2.1rem, 1.6rem + 2.2vw, 3.5rem);
+  --text-5xl: clamp(2.6rem, 1.8rem + 3.4vw, 4.75rem);
+
+  /* Spacing (Tailwind 4px scale) + fluid section rhythm */
+  --spacing-section: clamp(3rem, 2rem + 4vw, 6.5rem);
+  --spacing-gutter: clamp(1rem, 0.6rem + 1.6vw, 2rem);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Glow */
+  --shadow-glow-sm: 0 0 12px rgb(125 227 255 / 0.35);
+  --shadow-glow-md: 0 0 24px rgb(125 227 255 / 0.35), 0 0 4px rgb(125 227 255 / 0.6);
+  --shadow-glow-lg: 0 0 60px rgb(125 227 255 / 0.3), 0 0 16px rgb(125 227 255 / 0.5);
+  --text-shadow-glow: 0 0 18px rgb(125 227 255 / 0.55);
+
+  /* Motion */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 400ms;
+  --duration-scene: 900ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-light: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layers */
+  --z-index-header: 40;
+  --z-index-sticky: 30;
+  --z-index-drawer: 50;
+  --z-index-toast: 60;
+
+  /* Drawer / sheet enter + exit */
+  --animate-sheet-in-right: sheet-in-right var(--duration-slow) var(--ease-out);
+  --animate-sheet-out-right: sheet-out-right var(--duration-base) var(--ease-in-out);
+  --animate-sheet-in-bottom: sheet-in-bottom var(--duration-slow) var(--ease-out);
+  --animate-sheet-out-bottom: sheet-out-bottom var(--duration-base) var(--ease-in-out);
+  --animate-fade-in: fade-in var(--duration-base) var(--ease-out);
+  --animate-fade-out: fade-out var(--duration-base) var(--ease-out);
+
+  @keyframes sheet-in-right {
+    from {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes sheet-out-right {
+    to {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes sheet-in-bottom {
+    from {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes sheet-out-bottom {
+    to {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-out {
+    to {
+      opacity: 0;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Reduced motion: collapse every token duration so CSS motion becomes instant. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0.01ms;
+    --duration-base: 0.01ms;
+    --duration-slow: 0.01ms;
+    --duration-scene: 0.01ms;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-accent-fg);
+  }
+}
+
+/* Set before paint by the inline head script when the current announcement was dismissed. */
+html[data-hide-announcement] .announcement {
+  display: none;
+}
+
+@utility text-glow {
+  text-shadow: var(--text-shadow-glow);
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: var(--spacing-gutter);
 }
