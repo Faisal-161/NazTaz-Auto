@@ -2,8 +2,8 @@
 
 import { CircleHelp, Lightbulb, LightbulbOff } from 'lucide-react'
 import { finder } from '@/content/fitment'
+import { cx } from '@/lib/cx'
 import type { FactoryAnswer } from '@/lib/fitment'
-import { cn } from '@/lib/utils'
 
 const t = finder.factory
 const choices: { value: FactoryAnswer; Icon: typeof Lightbulb }[] = [
@@ -12,7 +12,10 @@ const choices: { value: FactoryAnswer; Icon: typeof Lightbulb }[] = [
   { value: 'unsure', Icon: CircleHelp },
 ]
 
-/** Native radio group styled as cards: arrow keys move between options, Space/Enter selects. */
+/**
+ * One tap answers and moves on, so these are buttons (aria-pressed), not radios: with radios the
+ * arrow keys would select AND advance (WCAG 3.2.2). Tab moves between options; Enter/Space picks.
+ */
 export function FactoryStep({
   value,
   onChange,
@@ -21,42 +24,40 @@ export function FactoryStep({
   onChange: (v: FactoryAnswer) => void
 }) {
   return (
-    <fieldset>
-      <legend className="text-base text-fg">{t.question}</legend>
-      <p className="mt-1 text-sm text-subtle">{t.help}</p>
+    <div role="group" aria-labelledby="factory-question" aria-describedby="factory-help">
+      <p id="factory-question" className="text-base text-fg">
+        {t.question}
+      </p>
+      <p id="factory-help" className="mt-1 text-sm text-subtle">
+        {t.help}
+      </p>
       <div className="mt-5 grid gap-3 sm:grid-cols-3">
         {choices.map(({ value: v, Icon }) => {
           const o = t.options[v]
-          const checked = value === v
+          const pressed = value === v
           return (
-            <label
+            <button
               key={v}
-              className={cn(
-                'group relative flex cursor-pointer flex-col gap-3 rounded-lg border bg-surface p-4 transition-[border-color,background-color] duration-base',
-                'has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-focus',
-                checked ? 'border-accent bg-accent-soft' : 'border-line hover:border-line-strong',
+              type="button"
+              aria-pressed={pressed}
+              onClick={() => onChange(v)}
+              className={cx(
+                'group flex flex-col items-start gap-3 rounded-lg border bg-surface p-4 text-left transition-[border-color,background-color] duration-base',
+                pressed ? 'border-accent bg-accent-soft' : 'border-line hover:border-line-strong',
               )}
             >
-              <input
-                type="radio"
-                name="factory"
-                value={v}
-                checked={checked}
-                onChange={() => onChange(v)}
-                className="sr-only"
-              />
               <Icon
                 aria-hidden
-                className={cn('size-5', checked ? 'text-accent' : 'text-muted group-hover:text-fg')}
+                className={cx('size-5', pressed ? 'text-accent' : 'text-muted group-hover:text-fg')}
               />
               <span>
                 <span className="block font-medium">{o.label}</span>
                 <span className="mt-0.5 block text-sm text-subtle">{o.hint}</span>
               </span>
-            </label>
+            </button>
           )
         })}
       </div>
-    </fieldset>
+    </div>
   )
 }

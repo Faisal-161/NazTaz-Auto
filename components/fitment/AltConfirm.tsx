@@ -2,14 +2,14 @@
 
 import { Camera, Hash, LoaderCircle, ScanLine } from 'lucide-react'
 import { Tabs } from 'radix-ui'
-import { useId, useState, useTransition } from 'react'
+import { useEffect, useId, useState, useTransition } from 'react'
 import { lookupVin } from '@/app/fitment/actions'
 import { buttonVariants } from '@/components/ui/button-variants'
 import { inputClass } from '@/components/ui/Field'
 import { finder } from '@/content/fitment'
 import type { Housing } from '@/lib/commerce/types'
+import { cx } from '@/lib/cx'
 import { findByPartNumber, MIN_PART_QUERY } from '@/lib/fitment'
-import { cn } from '@/lib/utils'
 
 const t = finder.alt
 
@@ -20,7 +20,7 @@ type Props = {
   onPhotoSent: () => void
 }
 
-const tabTrigger = cn(
+const tabTrigger = cx(
   'inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-md px-2 text-sm whitespace-nowrap text-muted transition-colors duration-fast',
   'hover:text-fg data-[state=active]:bg-surface-2 data-[state=active]:text-fg',
 )
@@ -55,13 +55,13 @@ export function AltConfirm({ housings, onPartMatch, onVinMatch, onPhotoSent }: P
             {t.tabs.photo}
           </Tabs.Trigger>
         </Tabs.List>
-        <Tabs.Content value="part" className="pt-4 outline-none">
+        <Tabs.Content value="part" className="pt-4">
           <PartNumberSearch housings={housings} onPick={onPartMatch} />
         </Tabs.Content>
-        <Tabs.Content value="vin" className="pt-4 outline-none">
+        <Tabs.Content value="vin" className="pt-4">
           <VinLookup onMatch={onVinMatch} />
         </Tabs.Content>
-        <Tabs.Content value="photo" className="pt-4 outline-none">
+        <Tabs.Content value="photo" className="pt-4">
           <PhotoReview onSent={onPhotoSent} />
         </Tabs.Content>
       </Tabs.Root>
@@ -95,12 +95,12 @@ function PartNumberSearch({
         autoComplete="off"
         spellCheck={false}
         aria-describedby={`${id}-help ${id}-status`}
-        className={cn(inputClass, 'mt-1.5 font-mono uppercase placeholder:normal-case')}
+        className={cx(inputClass, 'mt-1.5 font-mono uppercase placeholder:normal-case')}
       />
       <p id={`${id}-help`} className="mt-1.5 text-xs text-subtle">
         {t.part.help}
       </p>
-      <p id={`${id}-status`} aria-live="polite" className="mt-2 text-sm text-muted empty:hidden">
+      <p id={`${id}-status`} aria-live="polite" className="mt-2 min-h-5 text-sm text-muted">
         {status}
       </p>
       {matches.length ? (
@@ -176,7 +176,7 @@ function VinLookup({
           maxLength={24}
           aria-invalid={message?.tone === 'error' ? true : undefined}
           aria-describedby={`${id}-help ${id}-msg`}
-          className={cn(inputClass, 'font-mono uppercase')}
+          className={cx(inputClass, 'font-mono uppercase')}
         />
         <button
           type="submit"
@@ -193,8 +193,8 @@ function VinLookup({
       <p
         id={`${id}-msg`}
         aria-live="polite"
-        className={cn(
-          'mt-2 text-sm empty:hidden',
+        className={cx(
+          'mt-2 min-h-5 text-sm',
           message?.tone === 'error' ? 'text-danger' : 'text-success',
         )}
       >
@@ -206,33 +206,51 @@ function VinLookup({
 
 const MAX_BYTES = 10 * 1024 * 1024
 const TYPES = ['image/jpeg', 'image/png', 'image/heic', 'image/heif', 'image/webp']
+const EXT = /\.(jpe?g|png|heic|heif|webp)$/i
+/** Simple shape check (something@something.tld); the real check is the confirmation email. */
+export const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+/** Some OSes report HEIC with an empty type: fall back to the file extension. */
+const isImage = (f: File) => TYPES.includes(f.type) || (f.type === '' && EXT.test(f.name))
 
 function PhotoReview({ onSent }: { onSent: () => void }) {
   const id = useId()
   const [file, setFile] = useState<File | null>(null)
   const [preview, setPreview] = useState<string | null>(null)
   const [email, setEmail] = useState('')
-  const [error, setError] = useState<string | null>(null)
+  const [fileError, setFileError] = useState<string | null>(null)
+  const [emailError, setEmailError] = useState<string | null>(null)
   const [sent, setSent] = useState(false)
 
+  // Release the object URL when it changes or the form unmounts.
+  useEffect(
+    () => () => {
+      if (preview) URL.revokeObjectURL(preview)
+    },
+    [preview],
+  )
+
   function pick(f: File | undefined) {
-    setError(null)
-    if (preview) URL.revokeObjectURL(preview)
+    setFileError(null)
     setPreview(null)
     setFile(null)
     if (!f) return
-    if (!TYPES.includes(f.type)) return setError(t.photo.wrongType)
-    if (f.size > MAX_BYTES) return setError(t.photo.tooBig)
+    if (!isImage(f)) return setFileError(t.photo.wrongType)
+    if (f.size > MAX_BYTES) return setFileError(t.photo.tooBig)
     setFile(f)
     setPreview(URL.createObjectURL(f))
   }
 
   function submit(e: React.FormEvent) {
     e.preventDefault()
-    if (!file) return setError(t.photo.wrongType)
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return setError(t.photo.emailInvalid)
+    const fileErr = file ? null : t.photo.noFile
+    const emailErr = EMAIL.test(email) ? null : t.photo.emailInvalid
+    setFileError(fileErr)
+    setEmailError(emailErr)
+    if (fileErr || emailErr) return
     // Phase 2: upload to storage + create a review ticket. Mock: keep it in the browser.
     setSent(true)
+    setPreview(null)
     onSent()
   }
 
@@ -253,13 +271,17 @@ function PhotoReview({ onSent }: { onSent: () => void }) {
         <input
           id={id}
           type="file"
-          accept={TYPES.join(',')}
-          aria-describedby={`${id}-help ${id}-err`}
+          accept={[...TYPES, '.heic', '.heif'].join(',')}
+          aria-invalid={fileError ? true : undefined}
+          aria-describedby={`${id}-help ${id}-file-err`}
           onChange={(e) => pick(e.target.files?.[0])}
           className="mt-1.5 block w-full text-sm text-muted file:mr-3 file:h-10 file:rounded-full file:border-0 file:bg-surface-2 file:px-4 file:text-sm file:text-fg hover:file:bg-line"
         />
         <p id={`${id}-help`} className="mt-1.5 text-xs text-subtle">
           {t.photo.help}
+        </p>
+        <p id={`${id}-file-err`} aria-live="polite" className="min-h-5 text-sm text-danger">
+          {fileError}
         </p>
       </div>
       {preview ? (
@@ -279,13 +301,15 @@ function PhotoReview({ onSent }: { onSent: () => void }) {
           type="email"
           autoComplete="email"
           value={email}
+          aria-invalid={emailError ? true : undefined}
+          aria-describedby={`${id}-email-err`}
           onChange={(e) => setEmail(e.target.value)}
-          className={cn(inputClass, 'mt-1.5')}
+          className={cx(inputClass, 'mt-1.5')}
         />
+        <p id={`${id}-email-err`} aria-live="polite" className="min-h-5 text-sm text-danger">
+          {emailError}
+        </p>
       </div>
-      <p id={`${id}-err`} aria-live="polite" className="text-sm text-danger empty:hidden">
-        {error}
-      </p>
       <div className="flex flex-wrap items-center gap-3">
         <button type="submit" className={buttonVariants({ variant: 'secondary' })}>
           {t.photo.submit}

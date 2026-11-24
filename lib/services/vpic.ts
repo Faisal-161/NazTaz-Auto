@@ -8,8 +8,7 @@ import { mapVpicResponse, type DecodedVin } from '@/lib/fitment/vin'
 const ENDPOINT = 'https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues'
 
 export type VpicResult =
-  | { ok: true; vehicle: DecodedVin }
-  | { ok: false; error: 'lookup' | 'network' }
+  { ok: true; vehicle: DecodedVin } | { ok: false; error: 'lookup' | 'network' }
 
 class VpicNetworkError extends Error {}
 

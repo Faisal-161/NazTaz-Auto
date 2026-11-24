@@ -32,6 +32,36 @@ Newest first. Format: date, decision, why.
   SVGs never go through Netlify Image CDN.
 - Vercel remains an option later; nothing in the code is host-specific.
 
+## 2026-11-24: Fit finder UI decisions
+
+- **One-tap choices are buttons (aria-pressed), not radios.** Picking an answer advances the step;
+  radios would make arrow keys select AND advance (WCAG 3.2.2). Tab moves, Enter/Space picks.
+- **Native selects** for Year/Make/Model/Generation/Trim: OS pickers on phones, full keyboard
+  support, no extra JS.
+- **Design direction** (from the AnimatedWebs style references for Linear and Polestar, as guidance
+  only, nothing copied): a numbered 01→04 rail, monospace for codes and part numbers ("spec sheet"),
+  the glow colour kept for actions and the "light on" moment, and no gradient blobs or template
+  layouts. AnimatedWebs is on the free plan, so no component source was used.
+- **VIN** goes to the real NHTSA vPIC API from a server action (`app/fitment/actions.ts` →
+  `lib/services/vpic.ts`). It is validated locally first (check digit) and cached for days; network
+  failures throw so they are never cached. **TODO before launch:** rate-limit the action and bound
+  the cache.
+- **Part number vs selected vehicle:** if the part number's housing is not one of the vehicle's
+  candidates, the vehicle is cleared and the shopper sees why. A fit is never saved under the
+  wrong car.
+- **Opening a shared result URL saves that vehicle to My Garage** (the result says so). Kept for
+  now; revisit if it surprises people.
+- **Photo review upload has no rights checkbox:** it is a photo of the car, not artwork. The brief
+  requires the checkbox for artwork uploads (studio, gifts, business).
+- **Fitment data is labelled Sample** on /fitment until vehicles are verified.
+- **Bundle:** first-load client code uses `cx` (clsx) and `lib/money`, not `cn`/`lib/utils`
+  (tailwind-merge ≈ 10 KB). /fitment is 173 KB gz (not budgeted). Lazy-loading AltConfirm is
+  deferred because it sits above the fold on desktop.
+- **Tailwind gotcha:** a colour token `--color-X` generates `text-X`/`bg-X` utilities, so
+  `--color-glow` silently overrode our `text-glow` effect. The token was renamed to
+  `--color-light-pool`.
+- **Playwright** never reuses an existing _production_ server (it could be serving an old build).
+
 ## Open questions (waiting on founder)
 
 See the bottom of the first session summary. Answers are recorded here as they arrive.

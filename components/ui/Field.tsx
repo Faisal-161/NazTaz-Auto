@@ -1,8 +1,8 @@
 import { Label } from 'radix-ui'
 import { useId, type ComponentPropsWithRef, type ReactNode } from 'react'
-import { cn } from '@/lib/utils'
+import { cx } from '@/lib/cx'
 
-export const inputClass = cn(
+export const inputClass = cx(
   'h-11 w-full rounded-md border border-line-strong bg-bg px-3.5 text-base text-fg placeholder:text-subtle',
   'transition-[border-color,box-shadow] duration-fast',
   'focus-visible:border-accent focus-visible:shadow-glow-sm focus-visible:outline-none',
@@ -10,7 +10,7 @@ export const inputClass = cn(
 )
 
 export function Input({ className, ...props }: ComponentPropsWithRef<'input'>) {
-  return <input className={cn(inputClass, className)} {...props} />
+  return <input className={cx(inputClass, className)} {...props} />
 }
 
 type FieldProps = {
@@ -30,8 +30,8 @@ export function Field({ label, hideLabel, hint, error, className, children }: Fi
   const errorId = error ? `${id}-error` : undefined
   const describedBy = [hintId, errorId].filter(Boolean).join(' ') || undefined
   return (
-    <div className={cn('flex flex-col gap-1.5', className)}>
-      <Label.Root htmlFor={id} className={cn('text-sm font-medium', hideLabel && 'sr-only')}>
+    <div className={cx('flex flex-col gap-1.5', className)}>
+      <Label.Root htmlFor={id} className={cx('text-sm font-medium', hideLabel && 'sr-only')}>
         {label}
       </Label.Root>
       {children({ id, describedBy, invalid: Boolean(error) })}

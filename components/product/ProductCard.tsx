@@ -3,7 +3,8 @@ import type { ReactNode } from 'react'
 import { PlaceholderMedia } from '@/components/ui/PlaceholderMedia'
 import { finder } from '@/content/fitment'
 import type { Product } from '@/lib/commerce/types'
-import { cn, formatMoney } from '@/lib/utils'
+import { cx } from '@/lib/cx'
+import { formatMoney } from '@/lib/money'
 
 type Props = {
   product: Product
@@ -32,7 +33,7 @@ export function ProductCard({
   const max = product.priceRange.maxVariantPrice
   return (
     <article
-      className={cn(
+      className={cx(
         'group relative flex flex-col overflow-hidden rounded-lg border border-line bg-surface transition-colors duration-base hover:border-line-strong',
         className,
       )}

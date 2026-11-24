@@ -166,6 +166,76 @@ lint, typecheck, test 116/116, build green. Home unchanged (145.5 KB). No UI, so
 
 ---
 
+## Phase 1B: Fit finder UI, `/fitment` (2026-11-24)
+
+**Status:** built. Reviewer: **PASS** (2026-11-24, after 2 FIX FIRST rounds: 6 a11y/correctness
+items, then a regex that rejected emails containing "s"; all fixed and covered by e2e tests).
+
+### What the shopper sees
+
+01 Factory lights? (Yes / No lights / Not sure) → 02 Year/Make/Model (+ Generation/Trim only when
+needed; "not sure" help panel) → 03 Visual housing picker (housing + connector photos, tap to confirm,
+"light on" glow) → 04 Confirmed plate (vehicle, housing code, fit badge, Saved to My Garage, Design
+CTA) + products that fit + universal. Side panel: part number, **real VIN lookup (NHTSA vPIC)**,
+photo review (mock). Selection lives in the URL. Fitment is labelled Sample.
+
+### Files
+
+| File                                    | What                                                                                                                                                                          |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `app/fitment/page.tsx`                  | Static shell (h1, intro, Sample badge) + `<Suspense>` FinderLoader (searchParams + cached fitments/housings/products)                                                         |
+| `app/fitment/actions.ts`                | `lookupVin(input)` server action: length guard → `validateVin` → `decodeVin` → `matchVehicle`                                                                                 |
+| `lib/services/vpic.ts`                  | `decodeVin` (NHTSA vPIC, 8s timeout, `'use cache'` days; network errors throw so they are never cached)                                                                       |
+| `lib/fitment/vehicle-match.ts`          | `matchVehicle` (exact / punctuation-insensitive / unique prefix: "Silverado" → "Silverado 1500")                                                                              |
+| `lib/money.ts`                          | `formatMoney` split out of `lib/utils` (no tailwind-merge in client bundles)                                                                                                  |
+| `components/fitment/FitFinder.tsx`      | Orchestrator: step from `resolveFitment`, URL sync (replaceState), garage save, focus to the new step heading, part-number override (clears a mismatched vehicle), VIN, photo |
+| `components/fitment/StepFrame.tsx`      | Numbered rail step (done/active/upcoming, Change button)                                                                                                                      |
+| `components/fitment/FactoryStep.tsx`    | 3 choice buttons (aria-pressed)                                                                                                                                               |
+| `components/fitment/VehicleStep.tsx`    | Native selects, generation/trim on demand, unsure panel, no-match panel. Exports `TRIM_OTHER`                                                                                 |
+| `components/fitment/HousingStep.tsx`    | Housing + connector photo cards (buttons, aria-pressed, labelledby name, describedby specs), light-on glow                                                                    |
+| `components/fitment/ResultStep.tsx`     | Confirmation plate + one product grid (housing products with badge, then universal)                                                                                           |
+| `components/fitment/AltConfirm.tsx`     | Radix Tabs: part number search, VIN form (useTransition + server action), photo review (type/size/HEIC checks, preview, per-field errors)                                     |
+| `components/fitment/FitBadge.tsx`       | Verified / Likely / Check fit badge with an sr-only description                                                                                                               |
+| `components/fitment/FinderSkeleton.tsx` | Same footprint as step 1 + panel (no CLS)                                                                                                                                     |
+| `components/product/ProductCard.tsx`    | Reusable product tile (whole card is one link, `headingLevel`, badge slot). **Reuse on shop/PDP**                                                                             |
+| `content/fitment.ts`                    | All finder copy (+ badges)                                                                                                                                                    |
+
+Also changed: `app/globals.css` (tokens `--font-mono`, `--color-light-pool`, `--animate-light-on`,
+`html { scroll-padding-top: 6rem }`); `PlaceholderMedia` (`as` prop, cx, aspect via className); `Badge`, `Field`
+use `cx`; `eslint.config.mjs` (lib/services may fetch); `playwright.config.ts` (never reuse a prod
+server); placeholder SVGs (baked-in labels removed); `content/placeholders.ts` (fitment removed).
+
+### Tests
+
+- Unit: 120 (adds `tests/unit/fitment/vehicle-match.test.ts`).
+- E2E `e2e/fitment.spec.ts` (8, at 390 + 1440):
+  - F-150 picker → result → garage chip → reload restores, with axe WCAG 2.2 AA;
+  - Accord universal;
+  - keyboard only (arrows don't advance, focus follows step);
+  - part number;
+  - part number replacing a mismatched vehicle;
+  - VIN check digit;
+  - tab panel focus ring;
+  - photo review with `sam.smith@example.com`.
+
+### Verification
+
+- lint, typecheck, test 120/120, build green.
+- E2E (prod) smoke + fitment 13/13; shots 11/11.
+- Home 145.5 KB gz; /fitment 173.2 KB gz (not budgeted).
+- Screenshots: `.artifacts/screenshots/fitment-*`.
+
+### Known gaps / TODO
+
+- Product cards link to `/products/[handle]` (PDP not built: e2e tolerates /products 404s via `NOT_BUILT_YET`).
+- "Design your lights" → `/studio?product=…` (studio is a placeholder).
+- Photo review is mock (no upload; Phase 2 storage). **Rate-limit `lookupVin` before launch.**
+- Part-number overrides aren't stored in the URL (reload loses them).
+- Garage-wide filtering and badges on shop/home are the next roadmap item ("My Garage + site-wide filtering").
+- AltConfirm could be lazy-loaded (~12 KB) if /fitment gets a budget.
+
+---
+
 ## Entry template
 
 ```

@@ -5,8 +5,10 @@ import { finder } from '@/content/fitment'
 import type { FitMethod, Fitment, Housing, Product } from '@/lib/commerce/types'
 import {
   badgeFor,
+  housingsOf,
   labelFor,
   resolveFitment,
+  rowsFor,
   sameSlug,
   toFitParams,
   trimOptions,
@@ -25,7 +27,13 @@ import { TRIM_OTHER, VehicleStep } from './VehicleStep'
 type Step = 'factory' | 'vehicle' | 'housing' | 'result'
 const ORDER: Step[] = ['factory', 'vehicle', 'housing', 'result']
 
-type Override = { housing: string; method: Extract<FitMethod, 'part_number'>; exact: boolean }
+type Override = {
+  housing: string
+  method: Extract<FitMethod, 'part_number'>
+  exact: boolean
+  /** The part number didn't belong to the selected vehicle, so that vehicle was cleared. */
+  replacedVehicle: boolean
+}
 
 type Props = {
   rows: Fitment[]
@@ -95,7 +103,7 @@ export function FitFinder({ rows, housings, products, initial }: Props) {
   const universal = products.filter((p) => p.productType === 'universal')
   const savedToGarage = step === 'result' && vehicleComplete && !!(housing || universalPath)
 
-  // ----- URL is the source of truth for sharing / back button -----
+  // ----- keep the URL in sync for sharing and reloads (replaceState: Back leaves the finder) -----
   useEffect(() => {
     const qs = toFitParams(sel)
     window.history.replaceState(null, '', qs ? `?${qs}` : window.location.pathname)
@@ -146,6 +154,16 @@ export function FitFinder({ rows, housings, products, initial }: Props) {
     setOverride(null)
     setSel((s) => updateSelection(s, p))
   }
+  const onPartMatch = (code: string, exact: boolean) => {
+    // A part number that doesn't belong to the selected vehicle wins, but must never be saved to
+    // the garage under that vehicle: clear the vehicle and tell the shopper why.
+    const candidates = vehicleComplete
+      ? housingsOf(rowsFor(rows, sel.year!, sel.make!, sel.model!))
+      : []
+    const replacedVehicle = vehicleComplete && !candidates.some((c) => sameSlug(c, code))
+    if (replacedVehicle) setSel((cur) => ({ factory: cur.factory ?? 'yes' }))
+    setOverride({ housing: code, method: 'part_number', exact, replacedVehicle })
+  }
   const housingEditable =
     !override && resolveFitment(rows, { ...sel, housing: undefined }).kind === 'pick_housing'
 
@@ -175,7 +193,7 @@ export function FitFinder({ rows, housings, products, initial }: Props) {
           title={s.vehicle.title}
           state={stateOf('vehicle')}
           summary={vehicleLabel ?? (universalPath ? s.vehicle.skipped : s.vehicle.summaryEmpty)}
-          onEdit={() => patch({ model: undefined })}
+          onEdit={vehicleComplete ? () => patch({ model: undefined }) : undefined}
           headingRef={(el) => {
             headings.current.vehicle = el
           }}
@@ -234,6 +252,7 @@ export function FitFinder({ rows, housings, products, initial }: Props) {
             fitting={fitting}
             universal={universal}
             universalReason={resolution.kind === 'universal' ? resolution.reason : undefined}
+            note={override?.replacedVehicle ? finder.result.partReplacedVehicle : undefined}
             onRestart={() => {
               setOverride(null)
               setSel({})
@@ -245,10 +264,10 @@ export function FitFinder({ rows, housings, products, initial }: Props) {
       <aside className="lg:sticky lg:top-24 lg:self-start">
         <AltConfirm
           housings={housings}
-          onPartMatch={(code, exact) =>
-            setOverride({ housing: code, method: 'part_number', exact })
-          }
-          onVinMatch={(m) =>
+          onPartMatch={onPartMatch}
+          onVinMatch={(m) => {
+            // A VIN replaces any part-number housing chosen earlier.
+            setOverride(null)
             setSel((cur) =>
               updateSelection(cur, {
                 factory: cur.factory ?? 'unsure',
@@ -257,7 +276,7 @@ export function FitFinder({ rows, housings, products, initial }: Props) {
                 model: m.model,
               }),
             )
-          }
+          }}
           onPhotoSent={() => {
             if (vehicleComplete) {
               addVehicle({

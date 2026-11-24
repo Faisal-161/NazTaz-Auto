@@ -21,6 +21,8 @@ type Props = {
   universal: Product[]
   universalReason?: 'no_factory_lights' | 'trim_without_lights' | 'shopper_said_no'
   onRestart: () => void
+  /** Extra explanation shown on the confirmation plate. */
+  note?: string
 }
 
 export function ResultStep({
@@ -32,6 +34,7 @@ export function ResultStep({
   universal,
   universalReason,
   onRestart,
+  note,
 }: Props) {
   const isUniversal = !housing
   const primary = isUniversal ? universal : fitting
@@ -74,6 +77,11 @@ export function ResultStep({
             </div>
           </>
         )}
+        {note ? (
+          <p role="status" className="mt-4 max-w-prose text-sm text-warning">
+            {note}
+          </p>
+        ) : null}
         {savedToGarage ? (
           <p role="status" className="mt-5 flex items-start gap-2 text-sm">
             <Check aria-hidden className="mt-0.5 size-4 shrink-0 text-success" />

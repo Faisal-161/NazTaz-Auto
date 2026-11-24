@@ -14,7 +14,7 @@ import {
   type FitSelection,
   type Option,
 } from '@/lib/fitment'
-import { cn } from '@/lib/utils'
+import { cx } from '@/lib/cx'
 
 const t = finder.vehicle
 export const TRIM_OTHER = 'other'
@@ -155,8 +155,8 @@ function Select({
   const id = useId()
   const hintId = hint ? `${id}-hint` : undefined
   return (
-    <div className={cn('flex flex-col gap-1.5', className)}>
-      <label htmlFor={id} className={cn('text-sm font-medium', disabled && 'text-subtle')}>
+    <div className={cx('flex flex-col gap-1.5', className)}>
+      <label htmlFor={id} className={cx('text-sm font-medium', disabled && 'text-subtle')}>
         {label}
       </label>
       <div className="relative">
@@ -166,7 +166,7 @@ function Select({
           disabled={disabled}
           aria-describedby={hintId}
           onChange={(e) => onChange(e.target.value)}
-          className={cn(
+          className={cx(
             'h-12 w-full appearance-none rounded-md border border-line-strong bg-bg pr-10 pl-3.5 text-base text-fg',
             'transition-[border-color,box-shadow] duration-fast focus-visible:border-accent focus-visible:shadow-glow-sm focus-visible:outline-none',
             'disabled:cursor-not-allowed disabled:border-line disabled:text-subtle',

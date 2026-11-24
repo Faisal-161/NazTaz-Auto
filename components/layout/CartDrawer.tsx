@@ -9,7 +9,7 @@ import { EmptyState } from '@/components/ui/States'
 import { cartDrawer as t } from '@/content/layout'
 import { cartSubtotal, useCartStore } from '@/lib/stores/cart'
 import { toast } from '@/lib/stores/toast'
-import { formatMoney } from '@/lib/utils'
+import { formatMoney } from '@/lib/money'
 
 export function CartDrawer() {
   const { lines, isOpen, setOpen, setQuantity, remove, add, close } = useCartStore()

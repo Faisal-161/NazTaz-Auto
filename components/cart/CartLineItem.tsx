@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { cartDrawer as t } from '@/content/layout'
 import { ATTR, getAttr } from '@/lib/commerce/attributes'
 import type { ClientCartLine } from '@/lib/stores/cart'
-import { formatMoney } from '@/lib/utils'
+import { formatMoney } from '@/lib/money'
 
 type Props = {
   line: ClientCartLine

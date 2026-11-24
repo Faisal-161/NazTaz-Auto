@@ -25,6 +25,7 @@ export const finder = {
       'Confirm the exact puddle light housing on your vehicle in a few taps, then see the lights that plug straight in.',
   },
   eyebrow: 'Fit finder',
+  sampleData: 'Fitment data is sample data until each vehicle is verified.',
   title: 'Find the lights that fit your car',
   intro:
     'Four quick steps. We match your vehicle to its exact light housing, so the lights plug into the factory connector with no guessing and no emailing photos back and forth.',
@@ -112,6 +113,8 @@ export const finder = {
     designCta: 'Design your lights',
     shopCta: 'See all lights',
     restart: 'Start over',
+    partReplacedVehicle:
+      'That part number belongs to a different housing than the vehicle you picked, so we went with the part number. Check the housing photo before you order.',
     from: 'From',
     shipsAfterProof: (days: number) => `Ships ${days} days after proof approval`,
     view: 'View',
@@ -162,6 +165,7 @@ export const finder = {
       wrongType: 'Please send a JPG, PNG or HEIC photo.',
       email: 'Email for our reply',
       emailInvalid: 'Enter a valid email address.',
+      noFile: 'Choose a photo first.',
       note: 'Preview only: in this demo the photo stays in your browser.',
     },
   },

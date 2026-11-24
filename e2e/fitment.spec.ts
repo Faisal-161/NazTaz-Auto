@@ -37,7 +37,7 @@ for (const vp of [
       await expect(page.getByRole('heading', { level: 1 })).toHaveText(/find the lights/i)
       await shot(page, `fitment-1-start-${vp.width}`)
 
-      await page.getByText('Yes, it has them').click()
+      await page.getByRole('button', { name: /Yes, it has them/ }).click()
       await expect(page).toHaveURL(/factory=yes/)
       await page.getByLabel('Year').selectOption('2022')
       await page.getByLabel('Make').selectOption('ford')
@@ -47,7 +47,7 @@ for (const vp of [
       // door vs mirror → visual picker
       const picker = page.getByRole('group', { name: /which one is on your car/i })
       await expect(picker).toBeVisible()
-      await expect(picker.getByRole('radio')).toHaveCount(2)
+      await expect(picker.getByRole('button')).toHaveCount(2)
       await shot(page, `fitment-2-housing-${vp.width}`)
 
       // Click the card like a shopper would (the step advances, so the radio unmounts right away).
@@ -89,9 +89,12 @@ test('keyboard only: factory radios, selects, housing radios, focus follows the 
 }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('/fitment')
-  // Tab to the first factory radio and pick "Yes" with Space.
-  const yes = page.getByRole('radio', { name: /Yes, it has them/ })
+  // Arrow keys must NOT pick an option (WCAG 3.2.2); Space on a focused card does.
+  const yes = page.getByRole('button', { name: /Yes, it has them/ })
   await yes.focus()
+  await page.keyboard.press('ArrowDown')
+  await page.keyboard.press('ArrowRight')
+  await expect(page).not.toHaveURL(/factory=/)
   await page.keyboard.press('Space')
   await expect(page).toHaveURL(/factory=yes/)
   // Focus moved to the vehicle step heading
@@ -123,4 +126,52 @@ test('VIN: local validation rejects a bad check digit without calling the API', 
   await page.getByLabel(/VIN \(17 characters\)/).fill('1HGCM82643A004352')
   await page.getByRole('button', { name: 'Look up' }).click()
   await expect(page.getByText(/does not look right/)).toBeVisible()
+})
+
+test('part number for a different housing replaces the vehicle instead of saving a wrong fit', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('/fitment?factory=yes&year=2023&make=tesla&model=model-y')
+  await expect(page.getByText('TS-DR-01').first()).toBeVisible()
+  await page.getByLabel('OEM part number').fill('sample-rm-2001')
+  await page.getByRole('button', { name: 'Use this housing' }).click()
+  await expect(page.getByText(/belongs to a different housing/)).toBeVisible()
+  await expect(page.getByText('RM-MR-01').first()).toBeVisible()
+  await expect(page.getByText('Saved to My Garage')).toHaveCount(0)
+  await expect(page).not.toHaveURL(/model=model-y/)
+})
+
+test('tab panels show a focus ring', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('/fitment')
+  await page.getByRole('tab', { name: 'Part no.' }).focus()
+  await page.keyboard.press('Tab')
+  const panel = page.getByRole('tabpanel')
+  await expect(panel).toBeFocused()
+  const outline = await panel.evaluate((el) => getComputedStyle(el).outlineStyle)
+  expect(outline).not.toBe('none')
+})
+
+test('photo review: valid email (with an "s") and a PNG submit successfully', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('/fitment')
+  await page.getByRole('tab', { name: 'Photo' }).click()
+  // Without a file: field-specific error, linked to the file input
+  await page.getByRole('button', { name: 'Send for review' }).click()
+  await expect(page.getByLabel('Photo of your light housing')).toHaveAttribute(
+    'aria-invalid',
+    'true',
+  )
+  // 1x1 transparent PNG
+  const png = Buffer.from(
+    'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+    'base64',
+  )
+  await page
+    .getByLabel('Photo of your light housing')
+    .setInputFiles({ name: 'housing.png', mimeType: 'image/png', buffer: png })
+  await page.getByLabel('Email for our reply').fill('sam.smith@example.com')
+  await page.getByRole('button', { name: 'Send for review' }).click()
+  await expect(page.getByText(/We will check your photo/)).toBeVisible()
 })

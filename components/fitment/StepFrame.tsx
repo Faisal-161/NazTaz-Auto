@@ -3,7 +3,7 @@
 import { Check } from 'lucide-react'
 import type { ReactNode, Ref } from 'react'
 import { finder } from '@/content/fitment'
-import { cn } from '@/lib/utils'
+import { cx } from '@/lib/cx'
 
 export type StepState = 'done' | 'active' | 'upcoming'
 
@@ -46,7 +46,7 @@ export function StepFrame({
       <div className="relative flex flex-col items-center">
         <span
           aria-hidden
-          className={cn(
+          className={cx(
             'relative z-10 flex size-9 items-center justify-center rounded-md border font-mono text-xs tabular-nums transition-colors duration-base sm:size-11 sm:text-sm',
             state === 'active' && 'border-accent bg-accent-soft text-accent shadow-glow-sm',
             state === 'done' && 'border-line-strong bg-surface-2 text-fg',
@@ -58,7 +58,7 @@ export function StepFrame({
         {!last ? (
           <span
             aria-hidden
-            className={cn(
+            className={cx(
               'w-px flex-1 transition-colors duration-slow',
               state === 'done' ? 'bg-line-strong' : 'bg-line',
             )}
@@ -66,13 +66,13 @@ export function StepFrame({
         ) : null}
       </div>
 
-      <div className={cn('min-w-0', last ? 'pb-2' : 'pb-10 sm:pb-12')}>
+      <div className={cx('min-w-0', last ? 'pb-2' : 'pb-10 sm:pb-12')}>
         <div className="flex min-h-9 items-center justify-between gap-3 sm:min-h-11">
           <h2
             id={headingId}
             ref={headingRef}
             tabIndex={-1}
-            className={cn(
+            className={cx(
               'text-lg font-semibold tracking-tight outline-none sm:text-xl',
               state === 'upcoming' && 'text-subtle',
             )}

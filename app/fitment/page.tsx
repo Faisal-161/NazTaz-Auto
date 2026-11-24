@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import { FinderSkeleton } from '@/components/fitment/FinderSkeleton'
 import { FitFinder } from '@/components/fitment/FitFinder'
+import { SampleBadge } from '@/components/ui/SampleBadge'
 import { finder } from '@/content/fitment'
 import { getFitments, getHousings, getProducts } from '@/lib/commerce/queries'
 import { parseFitParams, toFitParams } from '@/lib/fitment'
@@ -19,7 +20,14 @@ export default function FitmentPage(props: PageProps<'/fitment'>) {
   return (
     <div className="container-page py-12 sm:py-16">
       <header className="max-w-3xl">
-        <p className="font-mono text-xs tracking-widest text-accent uppercase">{finder.eyebrow}</p>
+        <div className="flex flex-wrap items-center gap-3">
+          <p className="font-mono text-xs tracking-widest text-accent uppercase">
+            {finder.eyebrow}
+          </p>
+          {/* Brief: sample data must be labelled. Remove once fitment is verified (Phase 2). */}
+          <SampleBadge />
+          <span className="text-xs text-subtle">{finder.sampleData}</span>
+        </div>
         <h1 className="mt-3 text-4xl font-semibold">{finder.title}</h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">{finder.intro}</p>
       </header>
