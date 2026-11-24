@@ -1,4 +1,4 @@
-# {{BRAND}} storefront
+# NazTaz Auto storefront
 
 DTC storefront for custom LED puddle lights. Next.js 16 (App Router, Cache Components), TypeScript
 strict, Tailwind v4, Radix UI, Zustand. Runs fully on mock data today. Shopify (Storefront + Cart +

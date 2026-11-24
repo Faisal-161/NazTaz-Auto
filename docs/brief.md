@@ -4,7 +4,7 @@
 
 Custom LED **puddle lights**: door / side-mirror projectors that shine a logo, name or design on
 the ground when the car door opens. US-facing direct-to-consumer store. Solo founder.
-Brand name and domain are undecided: use `{{BRAND}}` (single source: `content/site.ts`).
+Brand name: **NazTaz Auto** (decided 2026-11-24). Domain undecided. Single source: `site.name` in `content/site.ts`.
 
 ### Product lines
 

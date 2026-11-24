@@ -1,10 +1,10 @@
-# {{BRAND}} — Custom LED Puddle Light Storefront
+# NazTaz Auto — Custom LED Puddle Light Storefront
 
 @AGENTS.md
 
 US-facing DTC store for custom LED puddle lights (door / side-mirror projectors that shine a logo,
-name or design on the ground). Solo founder; Claude is the lead developer. Brand name and domain
-are undecided — always write `{{BRAND}}` (it lives in `content/site.ts`, change it in one place).
+name or design on the ground). Solo founder; Claude is the lead developer. The brand name
+is **NazTaz Auto** (decided 2026-11-24); the domain is undecided. Never hard-code the name: use `site.name` from `content/site.ts`.
 
 **Current scope:** complete frontend, every feature working end-to-end on MOCK DATA. Shopify comes
 later and must be a data-adapter swap, not a rewrite. SEO content comes later but must not be blocked.
