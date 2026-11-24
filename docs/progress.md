@@ -236,6 +236,27 @@ server); placeholder SVGs (baked-in labels removed); `content/placeholders.ts` (
 
 ---
 
+## Visual identity: "Night street" (2026-11-24)
+
+**Why:** the founder said the first pass looked like a typical AI build. Rules are in
+[design-system.md](design-system.md).
+
+- `app/globals.css`: new tokens (warm asphalt, `accent` signal amber, `projection` warm white,
+  `light-pool`), tight radii, bigger fluid type, h1–h3 condensed uppercase.
+- `app/layout.tsx`: fonts **Big Shoulders** (display) + **Archivo** (body, wdth axis).
+- `components/ui/button-variants.ts`: rectangular actions, no glow; secondary = outline.
+- `components/sections/NightScene.tsx` (new): drawn SVG night scene (asphalt grain, door edge + lens,
+  beam, perspective projection, light-on). Reuse it as the poster for HeroDoor (F1).
+- `app/page.tsx` + `content/home.ts`: new hero (scene above the headline on mobile; split layout on
+  desktop) with a 4-line headline, intro, 2 CTAs and 3 numbered facts.
+- `public/placeholders/*.svg`: product/gallery/design-service redrawn as night shots; all others
+  recoloured to the warm palette.
+- Square-cornered buttons in VehicleStep, StickyFitCta and the skip link; Logo glow is projection white.
+- Verified: lint, typecheck, test 120/120, e2e 13/13, shots 11/11, axe clean. Home 145.6 KB gz.
+  The reviewer subagent was not run (not a roadmap item); run it with the next feature.
+
+---
+
 ## Entry template
 
 ```
