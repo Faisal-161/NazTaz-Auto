@@ -104,14 +104,14 @@ export function VehicleStep({ rows, sel, resolution, onPatch }: Props) {
             <button
               type="button"
               onClick={() => onPatch({ factory: 'yes' })}
-              className="inline-flex h-10 items-center rounded-full bg-accent px-4 text-sm font-medium text-accent-fg"
+              className="inline-flex h-10 items-center rounded-md bg-accent px-4 text-sm font-semibold text-accent-fg"
             >
               {t.unsureShowHousings}
             </button>
             <button
               type="button"
               onClick={() => onPatch({ factory: 'no' })}
-              className="inline-flex h-10 items-center rounded-full border border-line-strong px-4 text-sm text-fg hover:bg-surface-2"
+              className="inline-flex h-10 items-center rounded-md border border-line-strong px-4 text-sm text-fg hover:bg-surface-2"
             >
               {t.unsureNoLights}
             </button>

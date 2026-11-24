@@ -28,7 +28,7 @@ export function StickyFitCta() {
     <div className="fixed inset-x-0 bottom-0 z-sticky border-t border-line bg-bg/90 px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md lg:hidden">
       <Link
         href={href}
-        className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-accent text-sm font-semibold text-accent-fg shadow-glow-sm"
+        className="flex h-12 w-full items-center justify-center gap-2 rounded-md bg-accent text-sm font-semibold text-accent-fg"
       >
         <CarFront aria-hidden className="size-5" />
         <span className="truncate">{label}</span>

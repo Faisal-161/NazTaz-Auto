@@ -1,4 +1,4 @@
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Archivo, Big_Shoulders } from 'next/font/google'
 import { announcementScript } from '@/lib/announcement'
 import { AnnouncementBar } from '@/components/layout/AnnouncementBar'
 import { Footer } from '@/components/layout/Footer'
@@ -9,18 +9,25 @@ import { announcement, header, states } from '@/content/layout'
 import { pageMetadata } from '@/lib/seo/metadata'
 import './globals.css'
 
-const inter = Inter({ variable: '--font-inter', subsets: ['latin'], display: 'swap' })
-const display = Space_Grotesk({
-  variable: '--font-space-grotesk',
+// Body: Archivo (variable, incl. width axis for condensed labels). Display: Big Shoulders, a
+// condensed signage face (automotive, not the default "AI dark theme" grotesk).
+const archivo = Archivo({
+  variable: '--font-archivo',
   subsets: ['latin'],
-  weight: ['500', '600', '700'],
+  axes: ['wdth'],
+  display: 'swap',
+})
+const display = Big_Shoulders({
+  variable: '--font-big-shoulders',
+  subsets: ['latin'],
+  axes: ['opsz'],
   display: 'swap',
 })
 
 export const metadata = pageMetadata()
 
 export const viewport = {
-  themeColor: '#07090d',
+  themeColor: '#0c0b0a',
   colorScheme: 'dark',
 }
 
@@ -28,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${display.variable} antialiased`}
+      className={`${archivo.variable} ${display.variable} antialiased`}
       suppressHydrationWarning
     >
       <head>
@@ -38,7 +45,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       <body className="flex min-h-dvh flex-col pb-[calc(5rem+env(safe-area-inset-bottom))] lg:pb-0">
         <a
           href="#main"
-          className="sr-only z-toast rounded-full bg-accent px-4 py-2 font-medium text-accent-fg focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+          className="sr-only z-toast rounded-md bg-accent px-4 py-2 font-medium text-accent-fg focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
         >
           {header.skipLink}
         </a>

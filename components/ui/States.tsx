@@ -25,7 +25,7 @@ export function EmptyState({
       {icon ? (
         <div
           aria-hidden
-          className="mb-1 flex size-14 items-center justify-center rounded-full bg-accent-soft text-accent shadow-glow-sm [&_svg]:size-6"
+          className="mb-1 flex size-14 items-center justify-center rounded-full bg-accent-soft text-accent [&_svg]:size-6"
         >
           {icon}
         </div>

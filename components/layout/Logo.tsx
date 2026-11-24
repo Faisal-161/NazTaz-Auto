@@ -10,8 +10,8 @@ export function Logo() {
       <svg aria-hidden viewBox="0 0 32 32" className="size-7">
         <defs>
           <radialGradient id={glowId} cx="50%" cy="65%" r="50%">
-            <stop offset="0" stopColor="var(--color-accent)" stopOpacity="0.9" />
-            <stop offset="1" stopColor="var(--color-accent)" stopOpacity="0" />
+            <stop offset="0" stopColor="var(--color-projection)" stopOpacity="0.9" />
+            <stop offset="1" stopColor="var(--color-projection)" stopOpacity="0" />
           </radialGradient>
         </defs>
         <ellipse cx="16" cy="22" rx="14" ry="6" fill={`url(#${glowId})`} />
