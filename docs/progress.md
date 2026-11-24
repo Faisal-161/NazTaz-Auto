@@ -127,6 +127,45 @@ SampleBadge, PlaceholderMedia (next/image + visible "Placeholder" tag + aspect r
 
 ---
 
+## Phase 1B: Fitment logic, `lib/fitment` (2026-11-24)
+
+**Status:** built (logic only, no UI). Reviewer: **PASS** (2026-11-24, after one FIX FIRST round with 5 blocking items, all fixed and covered by regression tests).
+
+### Files (all new)
+
+| File                         | What                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `lib/fitment/types.ts`       | `FactoryAnswer`, `FitSelection` (slugs: factory, year, make, model, generation, trim, housing), `FitResolution` (incomplete / no_match / needs_generation / universal / ask_factory / pick_housing / resolved), `FitBadge`, `ProductFit`                                                                                         |
+| `lib/fitment/slug.ts`        | `slugify` (strips accents), `sameSlug`                                                                                                                                                                                                                                                                                           |
+| `lib/fitment/options.ts`     | `yearOptions`, `makeOptions`, `modelOptions`, `generationOptions`, `trimOptions`, `rowsFor`, `labelFor`                                                                                                                                                                                                                          |
+| `lib/fitment/resolve.ts`     | **`resolveFitment(rows, selection)`**: the finder's brain. "No lights" → universal up front; year overlap → ask generation; mid-generation split by year, overlap year → picker; trims apply to yes AND some rows; uncertain row → ask factory question; URL housing only if a candidate. Also `weakestConfidence`, `housingsOf` |
+| `lib/fitment/match.ts`       | `badgeFor`, `selectionForVehicle`, `resolveVehicle`, `candidateHousings`, **`productFit`** (built on resolveFitment so badges never disagree with the finder), `productsForVehicle`                                                                                                                                              |
+| `lib/fitment/part-number.ts` | `normalizePartNumber`, `findByPartNumber` (exact from 2 chars, prefix from 4)                                                                                                                                                                                                                                                    |
+| `lib/fitment/vin.ts`         | `validateVin` (check digit), `normalizeVin`, `mapVpicResponse`. The network call goes in the finder server action, not here                                                                                                                                                                                                      |
+| `lib/fitment/url.ts`         | `parseFitParams` (strict, defensive), `toFitParams` (stable order), `updateSelection` (clears downstream steps)                                                                                                                                                                                                                  |
+| `lib/fitment/index.ts`       | public exports                                                                                                                                                                                                                                                                                                                   |
+| `content/fitment.ts`         | `fitBadges` copy (Verified fit / Likely fit / Check fit)                                                                                                                                                                                                                                                                         |
+
+Docs: `docs/data-models.md` trims rule (empty = all trims; otherwise the row applies only to listed trims).
+
+### Tests
+
+116 total passing. `tests/unit/fitment/resolve.test.ts`, `match.test.ts`, `url-vin.test.ts`, `review-fixes.test.ts` (18 regression cases). Fixture checks: F-150 door/mirror picker, Silverado mid-generation split, Accord universal, Model Y instant, RAM trims.
+
+### Verification
+
+lint, typecheck, test 116/116, build green. Home unchanged (145.5 KB). No UI, so no screenshots.
+
+### TODO for the finder UI (next item)
+
+- `factory: "unsure"` loops back to `ask_factory`: the UI must offer the picker with Check fit, or photo review.
+- A vehicle not in our table gives `unknown`: show no badge and offer part number / VIN / photo.
+- **Save `generation` on garage vehicles** (a year in two generations otherwise gives `unknown`).
+- Add a vPIC model alias map ("Silverado" vs "Silverado 1500").
+- `updateSelection` clears make/model on a year change (deliberate).
+
+---
+
 ## Entry template
 
 ```

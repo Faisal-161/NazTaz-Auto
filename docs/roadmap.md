@@ -21,7 +21,7 @@ Tick a box only after `pnpm ci` is green and `perf-a11y-reviewer` returns PASS.
 
 ## Phase 1B: Core
 
-- [ ] Fitment logic (`lib/fitment`) + tests
+- [x] Fitment logic (`lib/fitment`) + tests
 - [ ] Fitment finder UI + visual housing picker + part number + VIN (NHTSA vPIC) + photo upload
 - [ ] My Garage + site-wide filtering + fit badges
 - [ ] Projection engine (`lib/projection`) + tests
