@@ -20,16 +20,16 @@ fields). TypeScript types live in `lib/commerce/types.ts`; zod schemas live in `
 
 ## Vehicle fitment (metaobject `vehicle_fitment`)
 
-| Field                   | Type                               | Notes                                                            |
-| ----------------------- | ---------------------------------- | ---------------------------------------------------------------- |
-| make, model, generation | string                             | Generation e.g. `14th gen (2021–2023)`                           |
-| year_start, year_end    | number                             | Inclusive                                                        |
-| trims                   | string[]                           | Empty means all trims                                            |
-| has_factory_lights      | `yes \| some \| no`                | `some` = trim-dependent → show housing picker                    |
-| housings                | string[]                           | Housing codes (refs). >1 = mid-generation change → visual picker |
-| confidence              | `verified \| likely \| unverified` | Maps to badges Verified / Likely / Check fit                     |
-| verified_installs       | number                             | Real count only; mock values labelled Sample                     |
-| source                  | string                             | e.g. `oem-catalog`, `customer-install`, `dealer`                 |
+| Field                   | Type                               | Notes                                                                           |
+| ----------------------- | ---------------------------------- | ------------------------------------------------------------------------------- |
+| make, model, generation | string                             | Generation e.g. `14th gen (2021–2023)`                                          |
+| year_start, year_end    | number                             | Inclusive                                                                       |
+| trims                   | string[]                           | Empty = all trims; otherwise the row (yes or some) applies ONLY to listed trims |
+| has_factory_lights      | `yes \| some \| no`                | `some` = trim-dependent → show housing picker                                   |
+| housings                | string[]                           | Housing codes (refs). >1 = mid-generation change → visual picker                |
+| confidence              | `verified \| likely \| unverified` | Maps to badges Verified / Likely / Check fit                                    |
+| verified_installs       | number                             | Real count only; mock values labelled Sample                                    |
+| source                  | string                             | e.g. `oem-catalog`, `customer-install`, `dealer`                                |
 
 ## Vehicle
 
