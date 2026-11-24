@@ -31,3 +31,4 @@ export {
 } from './part-number'
 export { validateVin, normalizeVin, mapVpicResponse, type DecodedVin, type VinCheck } from './vin'
 export { parseFitParams, toFitParams, updateSelection, MIN_YEAR, MAX_YEAR } from './url'
+export { matchVehicle } from './vehicle-match'

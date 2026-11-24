@@ -12,11 +12,9 @@ export function RoutePlaceholder({ route }: { route: RouteKey }) {
       <h1 className="text-4xl font-semibold">{p.title}</h1>
       <p className="max-w-md text-muted">{t.body(p.phase)}</p>
       <div className="mt-2 flex flex-wrap gap-3">
-        {route !== 'fitment' ? (
-          <Link href="/fitment" className={buttonVariants()}>
-            {t.primary}
-          </Link>
-        ) : null}
+        <Link href="/fitment" className={buttonVariants()}>
+          {t.primary}
+        </Link>
         <Link href="/" className={buttonVariants({ variant: 'secondary' })}>
           {t.secondary}
         </Link>

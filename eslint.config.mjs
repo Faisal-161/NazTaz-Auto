@@ -17,7 +17,7 @@ const eslintConfig = defineConfig([
   // lib/commerce may call fetch directly.
   {
     files: ['app/**', 'components/**', 'lib/**'],
-    ignores: ['lib/commerce/**'],
+    ignores: ['lib/commerce/**', 'lib/services/**'],
     rules: {
       'no-restricted-imports': [
         'error',
@@ -42,7 +42,10 @@ const eslintConfig = defineConfig([
       ],
       'no-restricted-globals': [
         'error',
-        { name: 'fetch', message: 'Fetch only inside lib/commerce (or a lib/* service module).' },
+        {
+          name: 'fetch',
+          message: 'Fetch only inside lib/commerce or lib/services (server-only modules).',
+        },
       ],
     },
   },

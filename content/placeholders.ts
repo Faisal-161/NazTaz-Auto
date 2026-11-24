@@ -13,7 +13,6 @@ export const placeholderCopy = {
 
 export const placeholders = {
   shop: { title: 'Shop puddle lights', phase: '1B' },
-  fitment: { title: 'Find lights that fit your vehicle', phase: '1B' },
   studio: { title: 'Design studio', phase: '1B' },
   cart: { title: 'Your cart', phase: '1B' },
   checkout: { title: 'Checkout', phase: '1B' },

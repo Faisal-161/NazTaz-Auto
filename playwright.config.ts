@@ -49,7 +49,8 @@ export default defineConfig({
   webServer: {
     command: prod ? `pnpm start --port ${PORT}` : `pnpm dev --port ${PORT}`,
     url: baseURL,
-    reuseExistingServer: !process.env.CI,
+    // Never reuse a prod server: it could be serving an older build.
+    reuseExistingServer: !process.env.CI && !prod,
     timeout: 120_000,
   },
 })
